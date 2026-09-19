@@ -1,0 +1,19 @@
+# raw extracts are large; regenerate with src/fetch_data.py
+data/raw/*
+!data/raw/.gitkeep
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# editors / os
+.DS_Store
+.vscode/
+.idea/
+.claude/
+
+# local scratch
+*.log
