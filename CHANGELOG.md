@@ -6,6 +6,7 @@ All notable changes to this repo. One line per change, newest first within each 
 
 ## Iteration 2
 
+- 2026-09-28 (Ma'el) [setup] Added the living brief for Claude Code sessions (CLAUDE.md) – teammates' agents read the same questions, direction, rules and gotchas before working
 - 2026-09-28 (Ma'el) [setup] Added the five Iteration 2 task cards, the card status table and the roadmap (docs/tasks/, docs/ROADMAP.md) – every teammate finds their card, dates, check-ins and risks in the repo
 - 2026-09-28 (Ma'el) [setup] Copied the project docs into docs/ and added the team standards, decision log and findings file (docs/) – one place for context, with emails, the Gmail link and the distribution list removed
 - 2026-09-28 (Ma'el) [setup] Added the cleaning script, the two small ACS tables and the data-landscape scripts (src/clean_data.py, data/cleaned/, src/landscape/) – the cleaning pipeline now runs from the repo root and teammates get the demographic inputs with the clone
