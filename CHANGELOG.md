@@ -14,6 +14,7 @@ Use the card ID in the brackets; use `[setup]` for repo or tooling work that bel
 
 ## Iteration 2
 
+- 2026-09-28 (Ma'el) [setup] Added 16 analytics skills and 3 project skills for Claude Code (.claude/skills/) – teammates' agents share the same workflows for cards, notation and findings
 - 2026-09-28 (Ma'el) [setup] Added CI checks for a CHANGELOG line and cleared notebooks (.github/workflows/, .github/scripts/) – no PR merges without notation or with notebook outputs
 - 2026-09-28 (Ma'el) [setup] Added the contribution guide and PR template, and documented the changelog format (CONTRIBUTING.md, .github/PULL_REQUEST_TEMPLATE.md, CHANGELOG.md) – every change is notated the same way
 - 2026-09-28 (Ma'el) [setup] Added the living brief for Claude Code sessions (CLAUDE.md) – teammates' agents read the same questions, direction, rules and gotchas before working
