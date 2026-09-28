@@ -1,6 +1,19 @@
-# raw extracts are large; regenerate with src/fetch_data.py
+# Raw request extracts are large and never committed; regenerate with src/fetch_data.py
 data/raw/*
 !data/raw/.gitkeep
+
+# Cleaned data is shared through the team Google Drive, except the README and the two small ACS tables
+data/cleaned/*
+!data/cleaned/README.md
+!data/cleaned/.gitkeep
+!data/cleaned/acs_demo_income_profile_clean.csv
+!data/cleaned/acs_population_summary_clean.csv
+
+# Cached API responses for the data-landscape harvest (31 MB)
+src/landscape/.cache/
+
+# No tracked file may exceed 5 MB: check with
+#   git ls-files -z | xargs -0 du -k | sort -n | tail -3
 
 # python
 __pycache__/
@@ -13,7 +26,11 @@ venv/
 .DS_Store
 .vscode/
 .idea/
-.claude/
+
+# Claude Code: share the project skills, keep personal settings local
+.claude/*
+!.claude/skills/
+.claude/settings.local.json
 
 # local scratch
 *.log
