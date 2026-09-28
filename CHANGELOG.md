@@ -14,6 +14,7 @@ Use the card ID in the brackets; use `[setup]` for repo or tooling work that bel
 
 ## Iteration 2
 
+- 2026-09-28 (Ma'el) [setup] Smoke-tested both CI checks with a throwaway notebook (notebooks/ci_smoke.ipynb) – prove the checks fail and pass before main is protected
 - 2026-09-28 (Ma'el) [setup] Published the repo as private glendale-311-equity on GitHub with main pushed (origin) – the team works from one shared remote
 - 2026-09-28 (Ma'el) [setup] Rewrote the README with the team, current iteration, Drive step and links (README.md) – one landing page for teammates
 - 2026-09-28 (Ma'el) [setup] Added 16 analytics skills and 3 project skills for Claude Code (.claude/skills/) – teammates' agents share the same workflows for cards, notation and findings
