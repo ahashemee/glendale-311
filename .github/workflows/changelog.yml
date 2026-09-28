@@ -1,0 +1,29 @@
+name: changelog
+
+# Every PR must add a CHANGELOG.md line. Skipped when the PR carries the label "no-changelog".
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+
+jobs:
+  changelog:
+    name: CHANGELOG updated
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'no-changelog') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check that CHANGELOG.md is among the changed files
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git diff --name-only "origin/${BASE_REF}...HEAD" > changed_files.txt
+          echo "Files changed against ${BASE_REF}:"
+          cat changed_files.txt
+          if grep -qx "CHANGELOG.md" changed_files.txt; then
+            echo "CHANGELOG.md is updated."
+          else
+            echo "::error file=CHANGELOG.md::Add a line to CHANGELOG.md: - YYYY-MM-DD (Name) [iterN-NN] what changed (path) – why"
+            exit 1
+          fi

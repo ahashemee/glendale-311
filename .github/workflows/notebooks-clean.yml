@@ -1,0 +1,20 @@
+name: notebooks-clean
+
+# Notebooks are committed with outputs cleared:
+#   jupyter nbconvert --clear-output --inplace notebooks/<file>.ipynb
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  notebooks-clean:
+    name: Notebooks have no outputs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check notebooks/**/*.ipynb for outputs and execution counts
+        run: python .github/scripts/check_notebooks_clean.py

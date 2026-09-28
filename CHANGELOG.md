@@ -14,6 +14,7 @@ Use the card ID in the brackets; use `[setup]` for repo or tooling work that bel
 
 ## Iteration 2
 
+- 2026-09-28 (Ma'el) [setup] Added CI checks for a CHANGELOG line and cleared notebooks (.github/workflows/, .github/scripts/) – no PR merges without notation or with notebook outputs
 - 2026-09-28 (Ma'el) [setup] Added the contribution guide and PR template, and documented the changelog format (CONTRIBUTING.md, .github/PULL_REQUEST_TEMPLATE.md, CHANGELOG.md) – every change is notated the same way
 - 2026-09-28 (Ma'el) [setup] Added the living brief for Claude Code sessions (CLAUDE.md) – teammates' agents read the same questions, direction, rules and gotchas before working
 - 2026-09-28 (Ma'el) [setup] Added the five Iteration 2 task cards, the card status table and the roadmap (docs/tasks/, docs/ROADMAP.md) – every teammate finds their card, dates, check-ins and risks in the repo
