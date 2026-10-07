@@ -1,15 +1,17 @@
 # Decision log
 
-Dated record of decisions that shape how the team works and how numbers are computed. Newest first. To change a decision, add a new dated row that supersedes the old one (say which), open a PR, and update any card or standard it affects. Never edit an old row except to mark it superseded.
+Dated record of decisions that shape how the team works and how numbers are computed. Newest first. To change a decision, add a new dated row that supersedes the old one (say which), open a PR, and update any task file or standard it affects. Never edit an old row except to mark it superseded.
 
 | Date | Decision | Why / source | Status |
 |---|---|---|---|
-| 2026-09-28 | The repo `glendale-311-equity` is the team's working space: docs, cards, code, outputs, a `CHANGELOG.md` line on every PR, and CI checks on `main`. | Every change gets notated and reviewed | Active |
+| 2026-09-28 | The repo `glendale-311-equity` is the team's working space: docs, tasks, code, outputs, a `CHANGELOG.md` line on every PR, and CI checks on `main`. | Every change gets notated and reviewed | Active |
 | 2026-09-25 | **Iteration 2** is an in-class presentation on **Mon 2026-10-19**. Scope: the reporting-propensity gap and time-to-close by district. District request signatures and the Code Compliance comparison wait for the final iteration. | Ma'el | Active |
 | 2026-09-25 | Iteration 2 measures time-to-close **controlled for request type** rather than against the City's response targets, because the targets table (GlendaleOne Escalations) is not downloaded. The talk says so. Never write "on target" or "late". | Ma'el; PROJECT.md 6.12 | Active |
 | 2026-09-25 | Presentations are HTML pages from Iteration 2 on. | Ma'el | Active |
 | 2026-09-25 | The repo is **private** for now; it may go public later. | Ma'el | Active |
-| 2026-09-25 | Task cards are markdown files in `docs/tasks/`. Ma'el posts the ping in the group chat himself. | Ma'el | Active |
+| 2026-09-29 | Tasks are one short markdown file per person in `docs/tasks/`: tasks, due dates and what Ma'el is looking for; the how stays in `docs/ANALYSIS_STANDARDS.md`. Supersedes the 2026-09-25 task-card row. Reviews of the analysis PRs go to Ma'el; peers comment during the share-out. | Ma'el | Active |
+| 2026-09-29 | Iteration 2 runs in stages with a team share-out (Mon 10/5), a short call (Wed 10/7) and Ma'el's synthesis (Thu 10/8) before the final stretch. | Ma'el | Active |
+| 2026-09-25 | Task cards are markdown files in `docs/tasks/`. Ma'el posts the ping in the group chat himself. | Ma'el | Superseded 2026-09-29 |
 | 2026-09-25 | Cleaned data is shared through the team Google Drive and is git-ignored (except the two small ACS tables). The raw request CSVs are **never** committed. | Ma'el | Active |
 | 2026-09-25 | One branch per task (`feature/<short-name>`), a PR, and one named reviewer. Every task has exactly one owner and one reviewer. Ma'el merges. | Ma'el | Active |
 | 2026-09-25 | Async check-ins every Mon and Thu in the group chat: Progress / Plans / Problems. | Ma'el | Active |
