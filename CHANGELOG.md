@@ -5,15 +5,16 @@ All notable changes to this repo, in the spirit of [Keep a Changelog](https://ke
 Line format, newest first within each section:
 
 ```
-- YYYY-MM-DD (Name) [iterN-NN] what changed (path) – why
+- YYYY-MM-DD (Name) [iterN] what changed (path) – why
 ```
 
-Use the card ID in the brackets; use `[setup]` for repo or tooling work that belongs to no card. Put a line under **Unreleased** while the PR is open for work that isn't tied to the current iteration; iteration work goes under that iteration's heading.
+Use the iteration in the brackets; use `[setup]` for repo or tooling work that belongs to no iteration. Put a line under **Unreleased** while the PR is open for work that isn't tied to the current iteration; iteration work goes under that iteration's heading.
 
 ## Unreleased
 
 ## Iteration 2
 
+- 2026-09-29 (Ma'el) [setup] Replaced the five long task cards with one short task file per person (docs/tasks/) and trimmed the roadmap, PR template and skills to match – a group project needs tasks, due dates and what's expected, not a manual
 - 2026-09-28 (Ma'el) [setup] Smoke-tested both CI checks with a throwaway notebook (notebooks/ci_smoke.ipynb) – prove the checks fail and pass before main is protected
 - 2026-09-28 (Ma'el) [setup] Published the repo as private glendale-311-equity on GitHub with main pushed (origin) – the team works from one shared remote
 - 2026-09-28 (Ma'el) [setup] Rewrote the README with the team, current iteration, Drive step and links (README.md) – one landing page for teammates

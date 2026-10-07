@@ -4,7 +4,7 @@ Claude Code loads every folder here that has a `SKILL.md` at its root. `CLAUDE.m
 
 ## Written for this repo
 
-- `work-task-card` – work a card in `docs/tasks/` end to end: branch, setup, steps, checks, outputs, findings.md, CHANGELOG line, PR.
+- `work-task-card` – work a task from `docs/tasks/` end to end: branch, setup, the analysis within the standards, outputs, findings.md, CHANGELOG line, PR.
 - `log-change` – pre-commit ritual: clear notebook outputs, CHANGELOG line, findings updated, PR body filled.
 - `update-findings` – fold a reviewed result into `docs/FINDINGS.md` and propose the Direction edit in `CLAUDE.md`.
 

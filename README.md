@@ -17,8 +17,8 @@ CIS 450 capstone project (ASU, Fall 2026) with the City of Glendale, Arizona's O
 
 **Iteration 2** – in-class presentation on **Mon 2026-10-19** (HTML page). Scope: the reporting-propensity gap (are request counts in line with each district's population, and what do the rates line up with?) and time-to-close by district, controlled for request type. Code Compliance and district request signatures come in the final iteration.
 
-- Dates, Gantt, check-ins and risks: [`docs/ROADMAP.md`](docs/ROADMAP.md)
-- Task cards and who owns what: [`docs/tasks/`](docs/tasks/README.md)
+- Dates: [`docs/ROADMAP.md`](docs/ROADMAP.md)
+- Your tasks, due dates and what's expected: [`docs/tasks/`](docs/tasks/README.md)
 
 ## Start here
 
@@ -41,7 +41,7 @@ data/
 src/                 fetch_data.py, clean_data.py, landscape/ (data-landscape harvest)
 notebooks/           iterN_topic_owner.ipynb (clear outputs before committing)
 outputs/             iterN/<topic>/: charts, tables and findings.md for deliverables
-docs/                project brief, standards, decisions, findings, roadmap, task cards
+docs/                project brief, standards, decisions, findings, roadmap, task files
 ```
 
 ## Getting started
@@ -53,7 +53,7 @@ python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\act
 pip install -r requirements.txt
 ```
 
-Then download `glendaleone_clean.csv` from the team Drive folder [DRIVE_FOLDER_LINK] into `data/cleaned/` (details in [`data/cleaned/README.md`](data/cleaned/README.md)). The two small ACS tables are already in the repo. That is all a task card needs.
+Then download `glendaleone_clean.csv` from the team Drive folder [DRIVE_FOLDER_LINK] into `data/cleaned/` (details in [`data/cleaned/README.md`](data/cleaned/README.md)). The two small ACS tables are already in the repo. That is all a task needs.
 
 To rebuild the raw data and the cleaned files yourself instead:
 
@@ -62,7 +62,7 @@ python src/fetch_data.py        # downloads ~165k request rows into data/raw/
 python src/clean_data.py        # rebuilds data/cleaned/ from data/raw/ and data/demographics/
 ```
 
-`fetch_data.py` pulls straight from the City's public ArcGIS FeatureServer layers, so everyone gets the same extract without emailing 40 MB CSVs around. Use `--limit 500` for a quick smoke test. The live feed may differ from the 2026-08-06 extract the cards were written against, so use the Drive copy for card work.
+`fetch_data.py` pulls straight from the City's public ArcGIS FeatureServer layers, so everyone gets the same extract without emailing 40 MB CSVs around. Use `--limit 500` for a quick smoke test. The live feed may differ from the 2026-08-06 extract the docs were written against, so use the Drive copy for task work.
 
 ## Data sources
 

@@ -1,6 +1,6 @@
 # Analysis standards
 
-The shared rules every analysis in this repo follows. They let several people work in parallel without asking each other how something was done: same inputs, same filters, same file names, same checks. Task cards in `docs/tasks/` copy the parts they need; when a card and this file disagree, the card wins for that task and the difference goes in its `findings.md`.
+The shared rules every analysis in this repo follows. They let several people work in parallel without asking each other how something was done: same inputs, same filters, same file names, same checks. Task files in `docs/tasks/` say what to produce; this file says how. If a task file asks for something different, the task file wins for that task and the difference goes in its `findings.md`.
 
 Section numbers such as "6.6" point to `docs/PROJECT.md` section 6 unless stated otherwise.
 
@@ -11,11 +11,11 @@ Section numbers such as "6.6" point to `docs/PROJECT.md` section 6 unless stated
 | Cleaned inputs | `data/cleaned/glendaleone_clean.csv`, `data/cleaned/acs_population_summary_clean.csv`, `data/cleaned/acs_demo_income_profile_clean.csv`. The two ACS files come with the clone; download `glendaleone_clean.csv` from the team Drive (see `data/cleaned/README.md`). **Never commit `data/raw/` or `glendaleone_clean.csv`.** |
 | Notebooks | `notebooks/iterN_topic_owner.ipynb`, committed with outputs cleared |
 | Outputs | `outputs/iterN/<topic>/`, holding CSV tables, PNG charts and `findings.md` |
-| Task cards | `docs/tasks/iterN-NN-topic.md` |
+| Task files | `docs/tasks/iterN-<name>.md` |
 | Branch | `feature/<short-name>`, e.g. `feature/iter2-propensity` |
-| PR title | `[iterN-NN] topic – Owner` |
+| PR title | `[iterN] topic – Owner` |
 
-The Code Compliance district join (6.1) is not in the repo yet. It is shared through the team Drive when a card needs it.
+The Code Compliance district join (6.1) is not in the repo yet. It is shared through the team Drive when a task needs it.
 
 ## 2. Standard load block
 
@@ -65,7 +65,7 @@ Decisions behind these rules are dated in `docs/DECISIONS.md`.
 ## 4. Output schema
 
 - Tables are long format with snake_case columns, `district` first, one row per district or per district x category, and an `n` column wherever a statistic is computed.
-- Every CSV named on a card has its exact column list on the card. Anyone should be able to build against a fake 6-row table before the real one exists.
+- Name every column in snake_case and say what it is in `findings.md`, so the next person can build on the table without opening the notebook.
 - `findings.md` holds three findings (each with the number and the comparison), a caveats list, and the **filter log** (`n_raw`, `n_window`, `n_final`, excluded, plus any later filter such as `n_closed`).
 
 ## 5. EDA checks
@@ -133,7 +133,7 @@ Chart checks:
 
 - [ ] **Source and freshness:** the file names and the "extract loaded 2026-08-06" date are stated in findings.md.
 - [ ] **Filters:** the window, the district filter and the closed filter match section 3 exactly.
-- [ ] **Denominators:** every rate names its population column, and the sensitivity rerun is included where the card asks for one.
+- [ ] **Denominators:** every rate names its population column, and the sensitivity rerun is included where the task asks for one.
 - [ ] **Partial periods:** December 2019 and August 2026 are excluded.
 - [ ] **Sums:** the parts add up to the total, and the percentages add up to about 100.
 - [ ] **Magnitude:** every rate and median is plausible (no negatives, no rate above 1,000 per 1,000 per year without a note).
@@ -170,7 +170,7 @@ Chart checks:
 
 1. `git checkout main && git pull`, then `git checkout -b feature/<short-name>`.
 2. Work in the notebook. Commit the notebook with outputs cleared (`jupyter nbconvert --clear-output --inplace notebooks/<file>.ipynb`), plus everything in `outputs/iterN/<topic>/`, plus a `CHANGELOG.md` line.
-3. Open a **draft PR** by the card's draft date, fill in the template and assign the named reviewer.
+3. Open a **draft PR** by the draft date in your task file, fill in the template and assign the named reviewer.
 4. Mark the PR ready when every definition-of-done box is ticked. Ma'el merges.
 
 Never commit `data/raw/` or `data/cleaned/glendaleone_clean.csv`; `.gitignore` already blocks both. Full details are in `CONTRIBUTING.md`.

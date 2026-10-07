@@ -542,7 +542,7 @@ glendale-311-equity/
 │   ├── CLEANING_LOG.md     ← what src/clean_data.py did to each file
 │   ├── ANALYSIS_STANDARDS.md · DECISIONS.md · FINDINGS.md · ROADMAP.md · DELIVERABLE_IDEAS.md
 │   ├── iteration1/         ← proposal answers and the Iteration 1 HTML deck
-│   └── tasks/              ← task cards, one file per iterN-NN
+│   └── tasks/              ← task files, one per person per iteration
 ├── src/                    ← code
 │   ├── fetch_data.py          downloads the two request CSVs into data/raw/
 │   ├── clean_data.py          rebuilds data/cleaned/ and its log

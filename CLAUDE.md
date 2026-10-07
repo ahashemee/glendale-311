@@ -30,7 +30,7 @@ CIS 450 capstone (ASU, Fall 2026) for the City of Glendale, Arizona. We analyse 
 2. `docs/PROJECT.md` sections 2 (questions), 6 (data gotchas) and 9 (conventions).
 3. `docs/DATA_DICTIONARY.md` (where it conflicts with PROJECT.md section 6, PROJECT.md wins).
 4. `docs/ANALYSIS_STANDARDS.md` (load block, rules, checks, chart standard).
-5. The card in `docs/tasks/` you are working on.
+5. Your task file in `docs/tasks/` (tasks, due dates, what Ma'el is looking for).
 
 Never re-profile raw data that the docs already describe. If the docs answer it, use the docs.
 
@@ -40,8 +40,8 @@ Never re-profile raw data that the docs already describe. If the docs answer it,
 |---|---|
 | `docs/PROJECT.md` | Source of truth: client, questions, data inventory, gotchas, methods |
 | `docs/ANALYSIS_STANDARDS.md` | Load block, definitions, EDA / stats / chart / QA checks, gotcha library |
-| `docs/DECISIONS.md` · `docs/FINDINGS.md` · `docs/ROADMAP.md` | Dated decisions · living findings · dates, Gantt, check-ins, risks |
-| `docs/tasks/` | Task cards and their status table |
+| `docs/DECISIONS.md` · `docs/FINDINGS.md` · `docs/ROADMAP.md` | Dated decisions · living findings · dates |
+| `docs/tasks/` | One task file per person: tasks, due dates, what's expected |
 | `docs/CLEANING_LOG.md` · `docs/DATA_LANDSCAPE.md` · `docs/iteration1/` | What cleaning did · every other City dataset · Iteration 1 proposal and deck |
 | `data/cleaned/` | Cleaned inputs; `glendaleone_clean.csv` comes from the team Drive (git-ignored) |
 | `data/raw/` | Raw request CSVs from `src/fetch_data.py` (git-ignored) |
@@ -53,9 +53,9 @@ Never re-profile raw data that the docs already describe. If the docs answer it,
 
 ## How work flows
 
-1. One card, one owner, one reviewer. Branch `feature/<short-name>` off an up-to-date `main`.
-2. Work in `notebooks/` and write only to your card's `outputs/iterN/<topic>/`.
-3. Open a draft PR by the card's draft date using `.github/PULL_REQUEST_TEMPLATE.md`, and assign the named reviewer. CI checks the CHANGELOG line and clean notebooks. Ma'el merges.
+1. One task, one owner, one reviewer. Branch `feature/<short-name>` off an up-to-date `main`.
+2. Work in `notebooks/` and write only to your task's `outputs/iterN/<topic>/`.
+3. Open a draft PR by the draft date in your task file using `.github/PULL_REQUEST_TEMPLATE.md`, and assign the named reviewer. CI checks the CHANGELOG line and clean notebooks. Ma'el merges.
 4. Check-ins every Mon and Thu in the group chat: Progress / Plans / Problems. A missed deadline gets 24 h grace, then the work is reassigned. Details: `CONTRIBUTING.md`.
 
 ## Notation rules (MUST)
@@ -89,7 +89,7 @@ Never re-profile raw data that the docs already describe. If the docs answer it,
 ## Skills in `.claude/skills/`
 
 Project skills:
-- `work-task-card` – start or resume a card in `docs/tasks/`: branch, setup, steps, checks, outputs, PR.
+- `work-task-card` – start or resume a task from `docs/tasks/`: branch, setup, the work within the standards, outputs, PR.
 - `log-change` – before every commit or PR: clear notebooks, CHANGELOG line, findings, PR body.
 - `update-findings` – fold a merged result into `docs/FINDINGS.md` and propose the Direction edit above.
 
