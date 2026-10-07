@@ -1,6 +1,6 @@
 ---
 name: update-findings
-description: Fold an analysis result into docs/FINDINGS.md in the glendale-311-equity repo with its evidence path, tag it [uncertain] where warranted, and propose the matching edit to the Direction (living) section of CLAUDE.md. Use when a card's findings.md is reviewed or merged, when a result supports or weakens a working hypothesis, or when the user says "add this to findings", "update findings", "does this change the story".
+description: Fold an analysis result into docs/FINDINGS.md in the glendale-311-equity repo with its evidence path, tag it [uncertain] where warranted, and propose the matching edit to the Direction (living) section of CLAUDE.md. Use when a task's findings.md is reviewed or merged, when a result supports or weakens a working hypothesis, or when the user says "add this to findings", "update findings", "does this change the story".
 ---
 
 # Update findings
@@ -9,17 +9,17 @@ description: Fold an analysis result into docs/FINDINGS.md in the glendale-311-e
 
 ## 1. Gather the evidence
 
-- Read the card's `outputs/iterN/<topic>/findings.md` and the CSV or chart behind each number.
+- Read the task's `outputs/iterN/<topic>/findings.md` and the CSV or chart behind each number.
 - Confirm the result meets `docs/ANALYSIS_STANDARDS.md` sections 3 and 8: the window and denominator are named, the filter log adds up, one number was checked a second way. If not, stop and say what's missing.
-- Only fold in results the reviewer has agreed with. Draft results stay in the card's own `findings.md`.
+- Only fold in results the reviewer has agreed with. Draft results stay in the task's own `findings.md`.
 
 ## 2. Write the entry
 
 Add it under **Validated findings** in `docs/FINDINGS.md`, newest first, using the entry format shown in that file:
 
 - One sentence with the number and its comparison ("X files N requests per 1,000 residents per year vs Y citywide").
-- Evidence: the path to the card's `findings.md` and the file that holds the number.
-- Card ID, merge date, window and denominator.
+- Evidence: the path to the task's `findings.md` and the file that holds the number.
+- Owner, merge date, window and denominator.
 - Caveats: n = 6 where relevant, ACS margins of error, exclusions. Tag anything not verified `[uncertain]`.
 - Which working hypothesis (H1, H2, H3) it bears on, and whether it supports it, weakens it or is unclear. Update that hypothesis's tag if the evidence warrants (`[unvalidated]` → `[supported]` or `[weakened]`), never to "proven".
 
