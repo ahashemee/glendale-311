@@ -1,6 +1,6 @@
 # data/cleaned/
 
-Cleaned inputs for every analysis card. Load them with the standard load block in `docs/ANALYSIS_STANDARDS.md`; never edit them in place.
+Cleaned inputs for every analysis task. Load them with the standard load block in `docs/ANALYSIS_STANDARDS.md`; never edit them in place.
 
 | File | What it is | Shape | In git? |
 |---|---|---|---|
@@ -11,7 +11,7 @@ Cleaned inputs for every analysis card. Load them with the standard load block i
 
 ## Get `glendaleone_clean.csv`
 
-Download it from the team Drive folder [DRIVE_FOLDER_LINK] into this folder, so the path is `data/cleaned/glendaleone_clean.csv`. It is git-ignored; never commit it.
+Download it from the [team Drive](https://drive.google.com/file/d/163jq3r0nbXTkIDn_F3JTwg4uVzoW7yxB/view?usp=drive_link) into this folder, so the path is `data/cleaned/glendaleone_clean.csv`. It is git-ignored; never commit it.
 
 ## Regenerate everything instead
 
@@ -23,4 +23,4 @@ python src/fetch_data.py && python src/clean_data.py
 
 `fetch_data.py` downloads the two request CSVs into `data/raw/` from the City's live ArcGIS feed, and `clean_data.py` rebuilds all three files and the log here.
 
-**Warning:** the live feed may differ from the 2026-08-06 extract that `docs/CLEANING_LOG.md` describes (the City keeps loading new rows, and Code Compliance was already 137 cases ahead by 2026-09-16). If your row counts differ from the log, use the Drive copy for card work so everyone's numbers match, and tell Ma'el.
+**Warning:** the live feed may differ from the 2026-08-06 extract that `docs/CLEANING_LOG.md` describes (the City keeps loading new rows, and Code Compliance was already 137 cases ahead by 2026-09-16). If your row counts differ from the log, use the Drive copy for task work so everyone's numbers match, and tell Ma'el.

@@ -14,6 +14,7 @@ Use the iteration in the brackets; use `[setup]` for repo or tooling work that b
 
 ## Iteration 2
 
+- 2026-10-13 (Ma'el) [setup] Filled in the Drive link for glendaleone_clean.csv (README.md, data/cleaned/README.md) and reworded the remaining card/[iterN-NN] mentions to task/[iterN] (.github/workflows/changelog.yml) – teammates had no way to find the file
 - 2026-09-29 (Ma'el) [setup] Replaced the five long task cards with one short task file per person (docs/tasks/) and trimmed the roadmap, PR template and skills to match – a group project needs tasks, due dates and what's expected, not a manual
 - 2026-09-28 (Ma'el) [setup] Smoke-tested both CI checks with a throwaway notebook (notebooks/ci_smoke.ipynb) – prove the checks fail and pass before main is protected
 - 2026-09-28 (Ma'el) [setup] Published the repo as private glendale-311-equity on GitHub with main pushed (origin) – the team works from one shared remote

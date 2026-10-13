@@ -53,7 +53,7 @@ python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\act
 pip install -r requirements.txt
 ```
 
-Then download `glendaleone_clean.csv` from the team Drive folder [DRIVE_FOLDER_LINK] into `data/cleaned/` (details in [`data/cleaned/README.md`](data/cleaned/README.md)). The two small ACS tables are already in the repo. That is all a task needs.
+Then download `glendaleone_clean.csv` from the [team Drive](https://drive.google.com/file/d/163jq3r0nbXTkIDn_F3JTwg4uVzoW7yxB/view?usp=drive_link) into `data/cleaned/` (details in [`data/cleaned/README.md`](data/cleaned/README.md)). The two small ACS tables are already in the repo. That is all a task needs.
 
 To rebuild the raw data and the cleaned files yourself instead:
 

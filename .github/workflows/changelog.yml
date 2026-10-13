@@ -24,6 +24,6 @@ jobs:
           if grep -qx "CHANGELOG.md" changed_files.txt; then
             echo "CHANGELOG.md is updated."
           else
-            echo "::error file=CHANGELOG.md::Add a line to CHANGELOG.md: - YYYY-MM-DD (Name) [iterN-NN] what changed (path) – why"
+            echo "::error file=CHANGELOG.md::Add a line to CHANGELOG.md: - YYYY-MM-DD (Name) [iterN] what changed (path) – why"
             exit 1
           fi
