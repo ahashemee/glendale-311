@@ -1,0 +1,7 @@
+district,n,n_slower_than_type,share_slower_than_type,share_slower_than_type_group,share_slower_than_city_median,share_trash_recycle,pp_vs_citywide_type
+BARREL,15765,6777,0.4299,0.4962,0.5135,0.5155,-0.05
+CACTUS,13182,5827,0.442,0.4933,0.5049,0.4491,1.16
+CHOLLA,19302,8473,0.439,0.5274,0.55,0.5382,0.86
+OCOTILLO,17692,7257,0.4102,0.4061,0.4046,0.4106,-2.02
+SAHUARO,20359,8942,0.4392,0.4518,0.4969,0.5257,0.88
+YUCCA,17639,7461,0.423,0.4478,0.4638,0.4866,-0.74

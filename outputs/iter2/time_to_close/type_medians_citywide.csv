@@ -1,0 +1,156 @@
+request_type,request_type_group,n,median_days
+Residential - Container Damaged,Trash/Recycle Services,33643,6.0
+Abandoned Vehicle - Roadway,Vehicle Issues,5248,3.0
+Street Light or Pedestrian Light Issue,Street Lighting,5103,9.0
+Traffic Sign - Repair,Traffic Signals/Signs,4457,3.0
+Parking Enforcement,Vehicle Issues,4274,3.0
+Trash/Debris in Residential Areas,Trash/Recycle Services,3844,0.0
+Residential - Missed Regular Collection,Trash/Recycle Services,3539,2.0
+Residential - Container Missing,Trash/Recycle Services,3500,1.0
+Bulk Trash - Other,Trash/Recycle Services,2986,1.0
+"Roadside, Alley, or Median Landscape",Streets/Sidewalks/Medians/Corners,2920,3.0
+Graffiti,Neighborhood Concerns,2893,1.0
+Street or Sidewalk - Damage,Streets/Sidewalks/Medians/Corners,2252,3.0
+Traffic Enforcement - Public Property,Traffic Safety,1635,5.0
+"Rent Assistance (Rent, Mortgage, Eviction)",Assistance Programs,1546,4.0
+Commercial - Missed Regular Collection,Trash/Recycle Services,1513,1.0
+Park Maintenance Request,Park & Recreation Facilities,1261,7.0
+High Water Bill With Possible Water Leak,Water/Sewer Services,1097,1.0
+Bulk Trash - Missed Pick Up,Trash/Recycle Services,1078,1.0
+Landscape - Roadside/Median/Alley,Streets/Sidewalks/Medians/Corners,1033,3.0
+Street Sweeping Request,Streets/Sidewalks/Medians/Corners,1011,3.0
+Traffic Signal - Equipment Repair,Traffic Signals/Signs,977,1.0
+Turn On Water (After Temporary Turn Off),Water/Sewer Services,956,0.0
+Traffic Signal - Timing,Traffic Signals/Signs,926,4.0
+"Utility Bill Assistance (SRP, APS, City of Glendale, Southwest Gas)",Assistance Programs,807,16.0
+Residential - Additional Container,Trash/Recycle Services,794,3.0
+Water Leak at Meter,Water/Sewer Services,777,0.0
+Homeless Encampment,Streets/Sidewalks/Medians/Corners,735,1.0
+Turn Off Water (Temporary),Water/Sewer Services,694,0.0
+Start/Turn On Utilities,Water/Sewer Services,692,1.0
+Neighborhood Speed Cushion,Traffic Safety,687,12.0
+Street Pavement Condition,Streets/Sidewalks/Medians/Corners,643,1.0
+Park/Trail Lights,Park & Recreation Facilities,615,31.0
+Traffic Sign - New,Traffic Signals/Signs,590,12.0
+Abandoned Shopping Carts,Streets/Sidewalks/Medians/Corners,477,1.0
+Report Water Waste,Water/Sewer Services,442,1.0
+Planning & Zoning Questions,"Zoning, Permitting, & Inspections",434,3.0
+Water Quality Concerns,Water/Sewer Services,411,6.0
+Parks Vegetation Trimming Request,Park & Recreation Facilities,355,18.0
+Other/Non-Billing,Water/Sewer Services,339,1.0
+Park Sprinkler Request,Park & Recreation Facilities,338,5.0
+Homelessness,Assistance Programs,313,1.0
+General Questions,Miscellaneous,291,1.0
+"Sewer Pests (Cockroaches, Rats, etc.)",Water/Sewer Services,278,0.0
+Dead Animal - Public Property,Streets/Sidewalks/Medians/Corners,241,0.0
+Landscape Irrigation Leak (Median/Roadside),Streets/Sidewalks/Medians/Corners,234,2.0
+"Rent Assistance (Rent, Eviction Diversion)",Assistance Programs,220,4.0
+Street or Sidewalk - Closure,Streets/Sidewalks/Medians/Corners,213,1.0
+Park Vandalism,Park & Recreation Facilities,208,1.5
+Park Trash Request,Park & Recreation Facilities,206,3.0
+"Home Repair Assistance (Roof, Electrical, Plumbing, Emergency Home Repair)",Assistance Programs,199,0.0
+Traffic Signal - Request New,Traffic Signals/Signs,199,10.0
+Street or Sidewalk - Damage or Obstruction,Streets/Sidewalks/Medians/Corners,185,1.0
+High Water Bill Request,Water/Sewer Services,182,0.0
+Bus Stop,Public Transportation,161,1.0
+Park Maintenance,Park & Recreation Facilities,149,4.0
+Unlicensed Rental Property,Neighborhood Concerns,144,1.0
+Roadway Striping - Issue,Streets/Sidewalks/Medians/Corners,131,14.0
+Street or Sidewalk Closure or Work Zone,Streets/Sidewalks/Medians/Corners,128,1.0
+Building Permit Requirements and Status,"Zoning, Permitting, & Inspections",125,2.0
+Park Playground Issue,Park & Recreation Facilities,112,2.0
+Report a Loss - Risk Management,Miscellaneous,96,1.0
+Roll-Off Container Request,Trash/Recycle Services,89,1.0
+Roadway Striping - Request New/Change,Streets/Sidewalks/Medians/Corners,88,11.0
+Parks Tree / Bush Trimming,Park & Recreation Facilities,79,7.0
+Stop/Turn Off Utilities,Water/Sewer Services,79,1.0
+Park Leak / Broken Sprinkler Head,Park & Recreation Facilities,77,5.0
+Damaged Utility Box,Miscellaneous,76,19.5
+Damaged Utility Box/Structure,Miscellaneous,75,7.0
+Website Suggestions,Website,73,5.0
+Urban Irrigation - Set Up and Payment Authorization,Water/Sewer Services,70,1.0
+Water Leak at Meter (Non-Emergency),Water/Sewer Services,66,1.0
+Recreation Facility Issue,Park & Recreation Facilities,59,2.0
+Home Repair Assistance,Assistance Programs,59,0.0
+Fire Code Questions,"Zoning, Permitting, & Inspections",58,3.0
+Park Storm Damage,Park & Recreation Facilities,54,3.0
+Public Housing/Housing Choice Voucher Questions,Assistance Programs,49,0.0
+Building Inspection Information,"Zoning, Permitting, & Inspections",47,1.0
+Dial-a-Ride Service,Public Transportation,47,1.0
+Missing/Damaged Valve Cover,Water/Sewer Services,46,1.0
+Park Trash,Park & Recreation Facilities,45,2.0
+Abatements,"Zoning, Permitting, & Inspections",41,2.0
+Plan Review Requirements and Status,"Zoning, Permitting, & Inspections",37,2.0
+Park Restroom Service Request,Park & Recreation Facilities,36,0.0
+Website Errors,Website,34,3.5
+Aircraft - Noise,Neighborhood Concerns,33,0.0
+Sports Field Conditions,Park & Recreation Facilities,33,3.0
+Pest in a Meter Box,Water/Sewer Services,32,0.0
+Architectural Review and Code Interpretations,"Zoning, Permitting, & Inspections",32,4.0
+Special Events Holiday Lights,"Zoning, Permitting, & Inspections",31,6.0
+Structural Review and Code Interpretations,"Zoning, Permitting, & Inspections",31,1.0
+New Sidewalk Request,Streets/Sidewalks/Medians/Corners,30,2.0
+Volunteer-Community Volunteer Program,Community Programs,30,1.0
+Library - General Questions,Library Services,30,1.0
+Damaged Guardrail,Traffic Safety,30,50.5
+Irrigation - Water Delivery Issues,Water/Sewer Services,30,1.0
+Building Permit Fees or Payments,"Zoning, Permitting, & Inspections",30,1.0
+Fiber Installation Concern,Miscellaneous,27,10.0
+Bees In Parks,Park & Recreation Facilities,26,1.0
+Aircraft - Low Flying,Neighborhood Concerns,25,0.0
+License & Sales Tax General Questions,Miscellaneous,25,0.0
+Portable AC Unit Program,Assistance Programs,24,1.0
+Recreation Facility Equipment Issue,Park & Recreation Facilities,23,1.0
+Electrical Review and Code Interpretations,"Zoning, Permitting, & Inspections",23,5.0
+Localized Flooding,Neighborhood Concerns,23,3.0
+Transportation Plan,Streets/Sidewalks/Medians/Corners,21,3.0
+"Dropped items down Drain/Grate (keys, phone, etc.)",Water/Sewer Services,20,0.0
+ADA Question or Concern,Americans with Disabilities Act (ADA),19,3.0
+New Street Request,Streets/Sidewalks/Medians/Corners,19,4.0
+Employee Complaint,Miscellaneous,18,3.0
+Public Housing/Voucher Questions,Assistance Programs,18,0.5
+Damaged Meter Box In Driveway (Non-Emergency),Water/Sewer Services,17,1.0
+Mechanical/Plumbing/Gas Review and Code Interpretations,"Zoning, Permitting, & Inspections",16,4.5
+Request New Sidewalk,Streets/Sidewalks/Medians/Corners,15,1.0
+Sign Permits,"Zoning, Permitting, & Inspections",14,4.0
+Roadside Memorial,Streets/Sidewalks/Medians/Corners,13,217.0
+Special Events (Major and Minor Events),"Zoning, Permitting, & Inspections",13,1.0
+Special Inspections,"Zoning, Permitting, & Inspections",13,1.0
+Damaged Meter Box In Driveway,Water/Sewer Services,13,1.0
+Recreation Facility Cleanliness,Park & Recreation Facilities,12,1.0
+Website Improvements,Website,12,8.5
+Schedule an Annual Inspection for a Care/Group home,"Zoning, Permitting, & Inspections",11,1.0
+Sandbags,Neighborhood Concerns,11,1.0
+Building Permit Renewal,"Zoning, Permitting, & Inspections",11,1.0
+New Bicycle Project Request,Streets/Sidewalks/Medians/Corners,10,3.5
+Irrigation Related Theft / Vandalism,Water/Sewer Services,9,3.0
+Pool Permits,"Zoning, Permitting, & Inspections",9,0.0
+Train/Railroad Crossing,Traffic Signals/Signs,9,4.0
+Vehicle Impound,Vehicle Issues,8,2.5
+Irrigation Billing,Water/Sewer Services,8,0.0
+Housing Application Status,Assistance Programs,8,1.0
+Public Housing/Housing Choice Questions,Assistance Programs,8,1.0
+GUS Circulator Service,Public Transportation,8,1.0
+Misapplied Utility Payment,Water/Sewer Services,7,0.0
+Knox Box,Community Programs,7,2.0
+Pot Hole,Streets/Sidewalks/Medians/Corners,7,4.0
+Valley Metro Service,Public Transportation,6,1.5
+Car Seat Inspection,Community Programs,6,0.5
+Schedule a Fire Construction Inspection,"Zoning, Permitting, & Inspections",5,2.0
+Fire Ride Along,Community Programs,5,2.0
+Food Truck Inspections,"Zoning, Permitting, & Inspections",5,3.0
+Request a Glendale Visitor Packet,Community Programs,4,16.5
+Park Restroom Dirty,Park & Recreation Facilities,4,2.0
+Mortgage Assistance,Assistance Programs,4,3.0
+Adopt A Street,Community Programs,4,1.0
+Flood Zone Determination,Neighborhood Concerns,4,5.0
+Request Glendale PD At Your Event,Community Programs,4,5.5
+Transportation Education,Community Programs,2,9.0
+Glendale Bike Ride,Community Programs,2,5.0
+CPR/Continuous Chest Compression (CCC) Training,Community Programs,2,1.0
+Fire Station Tour/Visit,Community Programs,2,11.5
+Speaker for Fire Safety Event,Community Programs,2,8.0
+ADA Bus Service,Public Transportation,2,3.0
+Library Fines,Library Services,1,1.0
+Registered Neighborhood,Community Programs,1,0.0
+EMS/Medical Records Request,Miscellaneous,1,1.0

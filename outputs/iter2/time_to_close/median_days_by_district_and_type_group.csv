@@ -1,0 +1,49 @@
+district,request_type_group,n,median_days,mean_days,p90_days,citywide_median_days,small_cell
+BARREL,Trash/Recycle Services,8127,5.0,5.23,8.0,4.0,False
+BARREL,Streets/Sidewalks/Medians/Corners,1554,2.0,10.24,20.0,2.0,False
+BARREL,Vehicle Issues,1577,3.0,3.42,7.0,3.0,False
+BARREL,Traffic Signals/Signs,959,3.0,10.18,17.0,3.0,False
+BARREL,Water/Sewer Services,981,0.0,1.14,3.0,0.0,False
+BARREL,Street Lighting,573,9.0,18.04,50.0,9.0,False
+BARREL,Park & Recreation Facilities,543,7.0,23.59,59.2,7.0,False
+BARREL,Assistance Programs,487,3.0,16.37,54.4,3.0,False
+CACTUS,Trash/Recycle Services,5920,5.0,5.37,8.0,4.0,False
+CACTUS,Streets/Sidewalks/Medians/Corners,1498,2.0,15.33,22.3,2.0,False
+CACTUS,Vehicle Issues,1665,3.0,3.48,7.0,3.0,False
+CACTUS,Traffic Signals/Signs,739,4.0,11.6,20.0,3.0,False
+CACTUS,Water/Sewer Services,754,0.0,1.7,4.0,0.0,False
+CACTUS,Street Lighting,488,11.5,28.09,72.0,9.0,False
+CACTUS,Park & Recreation Facilities,292,8.0,22.19,44.9,7.0,False
+CACTUS,Assistance Programs,715,4.0,19.25,63.0,3.0,False
+CHOLLA,Trash/Recycle Services,10388,6.0,5.2,8.0,4.0,False
+CHOLLA,Streets/Sidewalks/Medians/Corners,1474,2.0,13.21,24.7,2.0,False
+CHOLLA,Vehicle Issues,932,2.0,2.91,6.0,3.0,False
+CHOLLA,Traffic Signals/Signs,1382,3.0,10.82,20.0,3.0,False
+CHOLLA,Water/Sewer Services,1356,0.0,1.42,3.0,0.0,False
+CHOLLA,Street Lighting,1607,9.0,17.1,47.0,9.0,False
+CHOLLA,Park & Recreation Facilities,938,8.0,28.27,72.0,7.0,False
+CHOLLA,Assistance Programs,169,4.0,22.96,73.2,3.0,False
+OCOTILLO,Trash/Recycle Services,7264,3.0,5.22,8.0,4.0,False
+OCOTILLO,Streets/Sidewalks/Medians/Corners,2368,2.0,15.19,30.3,2.0,False
+OCOTILLO,Vehicle Issues,1882,3.0,3.22,7.0,3.0,False
+OCOTILLO,Traffic Signals/Signs,1211,2.0,7.11,14.0,3.0,False
+OCOTILLO,Water/Sewer Services,954,0.0,1.21,3.0,0.0,False
+OCOTILLO,Street Lighting,773,9.0,20.58,50.0,9.0,False
+OCOTILLO,Park & Recreation Facilities,411,4.0,20.75,48.0,7.0,False
+OCOTILLO,Assistance Programs,1084,2.0,18.46,64.0,3.0,False
+SAHUARO,Trash/Recycle Services,10703,4.0,4.76,8.0,4.0,False
+SAHUARO,Streets/Sidewalks/Medians/Corners,1741,2.0,12.45,21.0,2.0,False
+SAHUARO,Vehicle Issues,1772,3.0,3.46,7.0,3.0,False
+SAHUARO,Traffic Signals/Signs,1277,4.0,10.66,20.0,3.0,False
+SAHUARO,Water/Sewer Services,1235,0.0,1.27,3.0,0.0,False
+SAHUARO,Street Lighting,950,10.0,22.37,65.0,9.0,False
+SAHUARO,Park & Recreation Facilities,926,8.0,25.0,62.5,7.0,False
+SAHUARO,Assistance Programs,356,3.5,19.66,74.0,3.0,False
+YUCCA,Trash/Recycle Services,8584,4.0,4.71,8.0,4.0,False
+YUCCA,Streets/Sidewalks/Medians/Corners,1771,2.0,11.51,17.0,2.0,False
+YUCCA,Vehicle Issues,1702,3.0,3.24,7.0,3.0,False
+YUCCA,Traffic Signals/Signs,1590,3.0,10.08,18.0,3.0,False
+YUCCA,Water/Sewer Services,985,0.0,1.44,3.0,0.0,False
+YUCCA,Street Lighting,712,9.0,21.15,61.0,9.0,False
+YUCCA,Park & Recreation Facilities,582,7.0,27.44,71.6,7.0,False
+YUCCA,Assistance Programs,444,4.0,20.61,70.4,3.0,False

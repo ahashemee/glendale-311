@@ -1,0 +1,13 @@
+test,scope,plan,n,statistic,df,p_value,effect_size_name,effect_size,p_holm,p_text,p_holm_text
+Kruskal-Wallis,days_to_close by district (raw),planned,103939,769.04,5,5.752305574845368e-164,epsilon_squared,0.0074,,p < .001,
+Chi-square,"slower than typical for its exact type, by district",planned; type control revised after first run,103939,52.99,5,3.3800677917359376e-10,cramers_v,0.0226,,p < .001,
+Chi-square,"slower than typical for its type group, by district",planned (original type control),103939,679.29,5,1.4717383092278024e-144,cramers_v,0.0808,,p < .001,
+Chi-square,"slower than citywide median (raw yardstick), by district",planned comparison,103939,892.93,5,9.003685863373128e-191,cramers_v,0.0927,,p < .001,
+Kruskal-Wallis,days_to_close by district within Residential - Container Damaged,exploratory,33643,147.91,5,3.724756587813079e-30,epsilon_squared,0.0044,2.979805270250463e-29,p < .001,p < .001
+Kruskal-Wallis,days_to_close by district within Abandoned Vehicle - Roadway,exploratory,5248,37.36,5,5.081290204049155e-07,epsilon_squared,0.0071,1.5243870612147465e-06,p < .001,p < .001
+Kruskal-Wallis,days_to_close by district within Street Light or Pedestrian Light Issue,exploratory,5103,24.51,5,0.00017314817600368388,epsilon_squared,0.0048,0.00017314817600368388,p < .001,p < .001
+Kruskal-Wallis,days_to_close by district within Traffic Sign - Repair,exploratory,4457,67.84,5,2.8818622540250036e-13,epsilon_squared,0.0152,1.4409311270125018e-12,p < .001,p < .001
+Kruskal-Wallis,days_to_close by district within Parking Enforcement,exploratory,4274,46.95,5,5.809124747646668e-09,epsilon_squared,0.011,2.3236498990586672e-08,p < .001,p < .001
+Kruskal-Wallis,days_to_close by district within Trash/Debris in Residential Areas,exploratory,3844,77.87,5,2.3449420316405946e-15,epsilon_squared,0.0203,1.4069652189843567e-14,p < .001,p < .001
+Kruskal-Wallis,days_to_close by district within Residential - Missed Regular Collection,exploratory,3539,117.78,5,9.256973202134576e-24,epsilon_squared,0.0333,6.479881241494203e-23,p < .001,p < .001
+Kruskal-Wallis,days_to_close by district within Residential - Container Missing,exploratory,3500,32.98,5,3.7901338462759965e-06,epsilon_squared,0.0094,7.580267692551993e-06,p < .001,p < .001
