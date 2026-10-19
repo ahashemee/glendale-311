@@ -14,15 +14,15 @@ CIS 450 capstone (ASU, Fall 2026) for the City of Glendale, Arizona. We analyse 
 
 ## Direction (living)
 
-*Last updated: 2026-09-28.* This section is changed by PR whenever a finding shifts the story; it is never treated as fixed. Use the `update-findings` skill to propose the edit.
+*Last updated: 2026-10-18.* This section is changed by PR whenever a finding shifts the story; it is never treated as fixed. Use the `update-findings` skill to propose the edit.
 
 - **Current iteration:** Iteration 2, in-class presentation **Mon 2026-10-19** (HTML page).
 - **Scope:** the reporting-propensity gap (Q1: requests per resident vs population share and district covariates) and time-to-close by district, controlled for request type. Code Compliance and district request signatures wait for the final iteration.
-- **Working hypotheses** (from `docs/FINDINGS.md`; none validated yet):
+- **Working hypotheses** (from `docs/FINDINGS.md`):
   - H1 `[unvalidated]` Request volume per resident may line up with who reports (income, internet, language, rent burden) more than with need.
   - H2 `[unvalidated]` The equity signal may sit in the mix of request types, not the volume.
-  - H3 `[unvalidated]` District gaps in days-to-close may shrink once request type is controlled.
-- **Validated findings:** none yet. `docs/PROJECT.md` section 7 figures are orientation only.
+  - H3 `[supported]` District gaps in days-to-close shrink once request type is controlled (F-01: 14.5 to 3.2 points).
+- **Validated findings:** F-01 (about 78% of the raw district gap in time-to-close lines up with request-type mix). `docs/PROJECT.md` section 7 figures are orientation only.
 
 ## Read first, in this order
 

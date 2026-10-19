@@ -1,0 +1,7 @@
+step,rows_after,rows_removed
+raw file,106795,0
+request_date 2020-01-01 to 2026-07-31,106617,178
+district is one of the 6,104274,2343
+status == Closed,103940,334
+close_date not null,103940,0
+drop flag_close_before_request (not fixed),103939,1

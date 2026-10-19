@@ -4,12 +4,14 @@ One file per person per iteration: your tasks, when each is due, and what Ma'el 
 
 ## Iteration 2 – present in class Mon 2026-10-19
 
-| Person | File | Pieces | Final due |
-|---|---|---|---|
-| Shamie | [iter2-shamie.md](iter2-shamie.md) | Reporting-propensity gap | Sun 2026-10-11 (hard) |
-| Shenoy | [iter2-shenoy.md](iter2-shenoy.md) | Time-to-close by district | Sun 2026-10-11 (hard) |
-| Akshara | [iter2-akshara.md](iter2-akshara.md) | Monthly trend chart · storyline and copy · chart review and run sheet | Wed 2026-10-14 (copy, hard) · Fri 2026-10-16 (run sheet) |
-| Ma'el | [iter2-mael.md](iter2-mael.md) | Spatial join · reviews · synthesis · integration · HTML build | Fri 2026-10-16 (freeze) |
+| Person | File | Pieces | Final due | Status (2026-10-18) |
+|---|---|---|---|---|
+| Shamie | [iter2-shamie.md](iter2-shamie.md) | Reporting-propensity gap | Sun 2026-10-11 (hard) | Red: analysis done, but no PR by the due date or within the 24 h grace. Remaining repo work reassigned to Ma'el, in progress on `feature/iter2-propensity` |
+| Shenoy | [iter2-shenoy.md](iter2-shenoy.md) | Time-to-close by district | Sun 2026-10-11 (hard) | Done: PR #3 merged 2026-10-18 (F-01) |
+| Akshara | [iter2-akshara.md](iter2-akshara.md) | Monthly trend chart · storyline and copy · chart review and run sheet | Wed 2026-10-14 (copy, hard) · Fri 2026-10-16 (run sheet) | Red: trend numbers and page done, but no PR, notebook, storyline, copy or run sheet within the grace window. Remaining work reassigned to Ma'el, in progress on `feature/iter2-trend` |
+| Ma'el | [iter2-mael.md](iter2-mael.md) | Spatial join · reviews · synthesis · integration · HTML build | Fri 2026-10-16 (freeze) | In progress: reviews, merges and integration tonight. The spatial join and the synthesis note are not in the repo yet |
+
+**Reassignment (missed-deadline protocol, 24 h grace then reassign).** Shamie's and Akshara's remaining Iteration 2 work was reassigned to Ma'el, who is finishing it on 2026-10-18 from their handoffs. The work they did stays credited to them. The retro records this as a process issue, not a verdict on anyone.
 
 ## Team dates (everyone)
 

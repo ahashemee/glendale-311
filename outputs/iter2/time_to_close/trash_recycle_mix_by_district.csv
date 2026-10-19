@@ -1,0 +1,31 @@
+district,request_type,share_of_district_trash_recycle,n,citywide_type_median_days
+BARREL,Bulk Trash - Other,0.0588,478,1.0
+BARREL,Residential - Container Damaged,0.6652,5406,6.0
+BARREL,Residential - Container Missing,0.0667,542,1.0
+BARREL,Residential - Missed Regular Collection,0.0704,572,2.0
+BARREL,Trash/Debris in Residential Areas,0.0854,694,0.0
+CACTUS,Bulk Trash - Other,0.0583,345,1.0
+CACTUS,Residential - Container Damaged,0.6341,3754,6.0
+CACTUS,Residential - Container Missing,0.0591,350,1.0
+CACTUS,Residential - Missed Regular Collection,0.0708,419,2.0
+CACTUS,Trash/Debris in Residential Areas,0.087,515,0.0
+CHOLLA,Bulk Trash - Other,0.0372,386,1.0
+CHOLLA,Residential - Container Damaged,0.7902,8209,6.0
+CHOLLA,Residential - Container Missing,0.0474,492,1.0
+CHOLLA,Residential - Missed Regular Collection,0.0581,604,2.0
+CHOLLA,Trash/Debris in Residential Areas,0.035,364,0.0
+OCOTILLO,Bulk Trash - Other,0.0884,642,1.0
+OCOTILLO,Residential - Container Damaged,0.4576,3324,6.0
+OCOTILLO,Residential - Container Missing,0.1105,803,1.0
+OCOTILLO,Residential - Missed Regular Collection,0.0838,609,2.0
+OCOTILLO,Trash/Debris in Residential Areas,0.11,799,0.0
+SAHUARO,Bulk Trash - Other,0.0673,720,1.0
+SAHUARO,Residential - Container Damaged,0.6877,7360,6.0
+SAHUARO,Residential - Container Missing,0.0564,604,1.0
+SAHUARO,Residential - Missed Regular Collection,0.066,706,2.0
+SAHUARO,Trash/Debris in Residential Areas,0.0718,768,0.0
+YUCCA,Bulk Trash - Other,0.0483,415,1.0
+YUCCA,Residential - Container Damaged,0.6512,5590,6.0
+YUCCA,Residential - Container Missing,0.0826,709,1.0
+YUCCA,Residential - Missed Regular Collection,0.0733,629,2.0
+YUCCA,Trash/Debris in Residential Areas,0.082,704,0.0

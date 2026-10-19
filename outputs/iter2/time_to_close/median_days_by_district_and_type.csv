@@ -1,0 +1,49 @@
+district,request_type,n,median_days,mean_days,p90_days,citywide_median_days,small_cell
+BARREL,Residential - Container Damaged,5406,6.0,6.29,8.0,6.0,False
+BARREL,Abandoned Vehicle - Roadway,925,3.0,3.33,7.0,3.0,False
+BARREL,Street Light or Pedestrian Light Issue,573,9.0,18.04,50.0,9.0,False
+BARREL,Traffic Sign - Repair,602,3.0,5.64,13.0,3.0,False
+BARREL,Parking Enforcement,652,3.0,3.56,7.0,3.0,False
+BARREL,Trash/Debris in Residential Areas,694,0.0,2.68,5.0,0.0,False
+BARREL,Residential - Missed Regular Collection,572,2.0,1.85,3.0,2.0,False
+BARREL,Residential - Container Missing,542,1.0,2.03,5.0,1.0,False
+CACTUS,Residential - Container Damaged,3754,7.0,6.46,8.0,6.0,False
+CACTUS,Abandoned Vehicle - Roadway,941,3.0,3.5,7.0,3.0,False
+CACTUS,Street Light or Pedestrian Light Issue,488,11.5,28.09,72.0,9.0,False
+CACTUS,Traffic Sign - Repair,524,4.0,8.55,15.0,3.0,False
+CACTUS,Parking Enforcement,723,3.0,3.46,7.0,3.0,False
+CACTUS,Trash/Debris in Residential Areas,515,0.0,3.17,5.0,0.0,False
+CACTUS,Residential - Missed Regular Collection,419,2.0,1.92,3.0,2.0,False
+CACTUS,Residential - Container Missing,350,1.0,2.19,5.0,1.0,False
+CHOLLA,Residential - Container Damaged,8209,6.0,6.0,8.0,6.0,False
+CHOLLA,Abandoned Vehicle - Roadway,392,3.0,3.12,6.0,3.0,False
+CHOLLA,Street Light or Pedestrian Light Issue,1607,9.0,17.1,47.0,9.0,False
+CHOLLA,Traffic Sign - Repair,708,4.0,7.17,14.0,3.0,False
+CHOLLA,Parking Enforcement,540,2.0,2.75,6.0,3.0,False
+CHOLLA,Trash/Debris in Residential Areas,364,0.0,1.24,4.0,0.0,False
+CHOLLA,Residential - Missed Regular Collection,604,2.0,2.17,5.0,2.0,False
+CHOLLA,Residential - Container Missing,492,2.0,2.45,6.0,1.0,False
+OCOTILLO,Residential - Container Damaged,3324,6.0,6.14,10.0,6.0,False
+OCOTILLO,Abandoned Vehicle - Roadway,1118,2.0,2.95,7.0,3.0,False
+OCOTILLO,Street Light or Pedestrian Light Issue,773,9.0,20.58,50.0,9.0,False
+OCOTILLO,Traffic Sign - Repair,870,2.0,4.66,12.0,3.0,False
+OCOTILLO,Parking Enforcement,760,3.0,3.59,7.0,3.0,False
+OCOTILLO,Trash/Debris in Residential Areas,799,0.0,3.44,7.0,0.0,False
+OCOTILLO,Residential - Missed Regular Collection,609,2.0,2.44,4.0,2.0,False
+OCOTILLO,Residential - Container Missing,803,2.0,2.66,6.0,1.0,False
+SAHUARO,Residential - Container Damaged,7360,6.0,5.8,9.0,6.0,False
+SAHUARO,Abandoned Vehicle - Roadway,857,3.0,3.45,7.0,3.0,False
+SAHUARO,Street Light or Pedestrian Light Issue,950,10.0,22.37,65.0,9.0,False
+SAHUARO,Traffic Sign - Repair,722,4.0,7.75,15.0,3.0,False
+SAHUARO,Parking Enforcement,914,3.0,3.47,7.0,3.0,False
+SAHUARO,Trash/Debris in Residential Areas,768,0.0,1.37,3.0,0.0,False
+SAHUARO,Residential - Missed Regular Collection,706,3.0,2.69,5.0,2.0,False
+SAHUARO,Residential - Container Missing,604,2.0,2.48,5.0,1.0,False
+YUCCA,Residential - Container Damaged,5590,6.0,5.86,8.0,6.0,False
+YUCCA,Abandoned Vehicle - Roadway,1015,3.0,3.03,6.0,3.0,False
+YUCCA,Street Light or Pedestrian Light Issue,712,9.0,21.15,61.0,9.0,False
+YUCCA,Traffic Sign - Repair,1031,3.0,5.0,11.0,3.0,False
+YUCCA,Parking Enforcement,685,3.0,3.54,7.0,3.0,False
+YUCCA,Trash/Debris in Residential Areas,704,0.0,2.01,5.0,0.0,False
+YUCCA,Residential - Missed Regular Collection,629,1.0,2.17,4.0,2.0,False
+YUCCA,Residential - Container Missing,709,1.0,2.32,5.0,1.0,False
