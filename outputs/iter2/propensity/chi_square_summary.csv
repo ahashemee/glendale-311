@@ -1,0 +1,5 @@
+scenario,request_set,denominator,n,total_population,citywide_rate_per_1000_per_year,chi_square,df,p_value,cohens_w,w_size
+all_esri,all,esri,104274,265465,59.7,2831.3,5,< .001,0.165,small
+all_acs,all,acs,104274,253357,62.5,2884.1,5,< .001,0.166,small
+no_trash_esri,no_trash,esri,53247,265465,30.5,1145.4,5,< .001,0.147,small
+no_trash_acs,no_trash,acs,53247,253357,31.9,1033.3,5,< .001,0.139,small
