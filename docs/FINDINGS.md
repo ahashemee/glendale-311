@@ -2,9 +2,16 @@
 
 The team's current state of knowledge. Every entry points to the evidence that backs it. When a merged analysis changes the story, update this file in the same PR and propose the matching edit to the **Direction (living)** section of `CLAUDE.md`.
 
-Two findings so far (F-01, F-02). PROJECT.md section 7 figures are orientation only.
+Three findings so far (F-01 to F-03). PROJECT.md section 7 figures are orientation only.
 
 ## Validated findings
+
+### F-03 – Every district filed fewer requests in 2024 than in 2023 (citywide -14.6%, Cactus -22.4%), and from January to July 2026 the districts moved in different directions
+- Finding: citywide requests went from 16,778 in 2023 to 14,336 in 2024 (-14.6%), and every district declined, from Yucca (-8.1%) to Cactus (-22.4%). May 2023 holds both the highest district-month (Cactus, 408) and the highest citywide month (1,926); November 2024 is the lowest citywide month in the window (819). January to July 2026 vs the same months of 2025: Yucca +17.5%, Barrel +15.3%, Cactus +6.4%, Ocotillo +6.4%, Cholla -11.2%, Sahuaro -11.6% (citywide +2.6%).
+- Evidence: outputs/iter2/trend/findings.md, monthly_counts_by_district.csv, change_by_district.csv, monthly_trend_by_district.png, trend_charts.html
+- Owner: Akshara (finished by Ma'el) · Merged: 2026-10-18 · Window and denominator: GlendaleOne requests opened 2020-01-01 to 2026-07-31, 474 district-months summing to n = 104,274 (2,343 with no district excluded); raw counts, no population denominator
+- Caveats: raw counts, not per resident. 2026 is compared January to July only. Descriptive: nothing here tests why a month stands out. Associations only.
+- Hypothesis it bears on: none directly (unclear). Context for H1 and H2: a rate over the whole window averages over volume that moves by year and by month.
 
 ### F-02 – Cholla files 1.56x the requests per resident of Cactus, and the rate's alignment with income, renters and limited English nearly disappears without Trash/Recycle
 - Finding: district request counts do not match population shares (chi-square(5) = 2,831.3, Cohen's w = 0.165, small). Cholla files 72.9 requests per 1,000 residents per year and Cactus 46.8, against 59.7 citywide. With all requests, higher-rate districts have higher median income, fewer renters and fewer limited-English speakers (Spearman rho +0.43, -0.60, -0.66). With Trash/Recycle Services removed (48.9% of requests), those drop to -0.14, -0.03 and -0.09, and only rent burden holds (+0.70).
