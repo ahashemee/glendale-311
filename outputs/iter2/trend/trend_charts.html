@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monthly Request Trends by Council District – CIS 450 Team Analysis</title>
+
+<style>
+:root{
+  --navy:#123b5d;
+  --navy-dark:#0b2e4a;
+  --navy-soft:#eaf1f6;
+  --orange:#ea7b22;
+  --orange-soft:#fff2e7;
+  --text:#183247;
+  --muted:#5d6f80;
+  --border:#d7e0e8;
+  --card:#ffffff;
+  --bg:#f5f8fb;
+  --accent:var(--orange);
+}
+*{box-sizing:border-box}
+body{
+  font-family:Inter,Arial,sans-serif;
+  margin:0;
+  color:var(--text);
+  background:linear-gradient(180deg, #f5f8fb 0%, #eef4f8 100%);
+}
+.wrap{max-width:1240px;margin:0 auto;padding:32px 24px 44px}
+.hero{
+  background:linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color:#fff;
+  border-radius:20px;
+  padding:28px 30px;
+  box-shadow:0 12px 28px rgba(10,35,59,.16);
+  border:1px solid rgba(255,255,255,.08);
+}
+.brand-wrap{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
+}
+.brand-name{font-size:28px;font-weight:800;line-height:1}
+.brand-tag{
+  margin-top:4px;
+  color:#d9e6ef;
+  font-size:14px;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+h1{margin:0 0 10px;font-size:34px;line-height:1.15}
+.lead{margin:0;color:#e6eef5;max-width:920px;line-height:1.55}
+.summary{
+  margin-top:18px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.12);
+  border-left:5px solid var(--orange);
+  padding:14px 16px;
+  border-radius:14px;
+  color:#f4f8fb;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:24px;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-top:5px solid var(--orange);
+  border-radius:18px;
+  padding:16px 16px 14px;
+  box-shadow:0 8px 22px rgba(18,59,93,.08);
+}
+.card h2{
+  margin:0;
+  color:var(--navy);
+  font-size:20px;
+}
+.small{margin:6px 0 12px;color:var(--muted);font-size:13px}
+.footer{
+  margin-top:26px;
+  font-size:13px;
+  color:var(--muted);
+  background:#fff;
+  border:1px solid var(--border);
+  border-left:5px solid var(--navy);
+  border-radius:14px;
+  padding:14px 16px;
+}
+svg{width:100%;height:auto;display:block;background:#fff}
+.axis{stroke:#5f6f7d;stroke-width:1}
+.gridline{stroke:#dfe7ee;stroke-width:1}
+.line{fill:none;stroke:var(--accent);stroke-width:2.8}
+.tick{fill:#586879;font-size:11px}
+.note{fill:var(--text);font-size:12px;font-weight:700}
+.legend{display:flex;align-items:center;gap:8px;margin-top:8px;color:#506274;font-size:12px}
+.swatch{
+  width:18px;height:3px;
+  background:var(--accent);
+  display:inline-block;border-radius:99px
+}
+@media (max-width: 900px){
+  .grid{grid-template-columns:1fr}
+  .brand-name{font-size:24px}
+  h1{font-size:28px}
+}
+
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+.kpi{background:#fff;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:12px 14px;color:var(--navy)}
+.kpi .v{display:block;color:var(--navy-dark);font-size:22px;font-weight:800;margin-top:2px}
+.kpi .s{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.callout{margin-top:20px;background:var(--orange-soft);border:1px solid #f2c69f;border-left:5px solid var(--orange);border-radius:14px;padding:14px 16px;line-height:1.5;color:var(--text)}
+.section-title{margin:28px 0 0;color:var(--navy);font-size:24px}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr));}}
+
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="brand-wrap">
+      <div><div class="brand-name">CIS 450 student team analysis</div><div class="brand-tag">Iteration 2 · built from the City of Glendale's public GlendaleOne request data</div></div>
+    </div>
+    <h1><!--fill:title-->All six districts filed fewer requests in 2024 than in 2023; Cactus fell the most (-22.4%)<!--/fill:title--></h1>
+    <p class="lead"><!--fill:lead-->January 2020 to July 2026 (79 months) · monthly GlendaleOne request counts by Council District · raw counts, not per resident · every panel uses the same 0 to 500 request scale.<!--/fill:lead--></p>
+    <div class="summary"><strong>Observations</strong><ul style="margin:10px 0 0 22px;padding:0;line-height:1.5"><li><!--fill:obs_1-->Every district filed fewer requests in 2024 than in 2023. Cactus fell the most, -22.4% (2,258 to 1,753), and Yucca the least, -8.1%. Citywide: -14.6% (16,778 to 14,336).<!--/fill:obs_1--></li><li><!--fill:obs_2-->The highest single district-month was Cactus in May 2023, with 408 requests. The highest citywide month was May 2023, with 1,926 requests across the six districts.<!--/fill:obs_2--></li><li><!--fill:obs_3-->January to July 2026 against the same months of 2025: Yucca +17.5%, Barrel +15.3%, Cactus +6.4% and Ocotillo +6.4% rose; Cholla -11.2% and Sahuaro -11.6% fell. Citywide: +2.6%.<!--/fill:obs_3--></li><li><!--fill:obs_4-->Citywide, November 2024 had 819 requests, the lowest of all 79 months in the window.<!--/fill:obs_4--></li></ul></div>
+    <div class="kpis">
+      <div class="kpi">Analysis window<span class="v"><!--fill:kpi_window-->79 months<!--/fill:kpi_window--></span><span class="s"><!--fill:kpi_window_note-->Jan 2020 to Jul 2026<!--/fill:kpi_window_note--></span></div>
+      <div class="kpi">Council districts<span class="v"><!--fill:kpi_districts-->6<!--/fill:kpi_districts--></span><span class="s"><!--fill:kpi_districts_note-->104,274 requests in 474 district-months<!--/fill:kpi_districts_note--></span></div>
+      <div class="kpi">Highest district-month<span class="v"><!--fill:kpi_peak-->408<!--/fill:kpi_peak--></span><span class="s"><!--fill:kpi_peak_note-->Cactus, May 2023<!--/fill:kpi_peak_note--></span></div>
+      <div class="kpi">Steepest 2023 to 2024 change<span class="v"><!--fill:kpi_drop-->-22.4%<!--/fill:kpi_drop--></span><span class="s"><!--fill:kpi_drop_note-->Cactus (citywide -14.6%)<!--/fill:kpi_drop_note--></span></div>
+    </div>
+  </section>
+
+  <h2 class="section-title"><!--fill:section_title-->In 2026 the districts moved in different directions: Yucca +17.5%, Sahuaro -11.6% (January to July, 2026 vs 2025)<!--/fill:section_title--></h2>
+  <div id="charts" class="grid"></div>
+
+  <div class="footer">
+    <strong>Source:</strong> <!--fill:footer_source-->City of Glendale GlendaleOne External Requests, cleaned team extract loaded 2026-08-06.<!--/fill:footer_source-->
+    <!--fill:footer_filters-->Requests outside 2020-01-01 through 2026-07-31 (178) and requests without one of the six Council Districts (2,343) are excluded, leaving 104,274 requests in 474 district-months. Counts are raw, not per resident.<!--/fill:footer_filters-->
+    <br><strong>How to read:</strong> <!--fill:footer_read-->Hover over any point to see the exact month and request count. Every panel uses the same vertical scale (0 to 500 requests), so district heights are directly comparable.<!--/fill:footer_read-->
+    <br>Prepared by a CIS 450 student team at Arizona State University from the City's public data; this is not an official City of Glendale product.
+  </div>
+</div>
+
+<script>
+/*fill:data*/
+const rows = [{"district": "BARREL", "month": "2020-01", "n": 138}, {"district": "BARREL", "month": "2020-02", "n": 157}, {"district": "BARREL", "month": "2020-03", "n": 222}, {"district": "BARREL", "month": "2020-04", "n": 272}, {"district": "BARREL", "month": "2020-05", "n": 231}, {"district": "BARREL", "month": "2020-06", "n": 272}, {"district": "BARREL", "month": "2020-07", "n": 224}, {"district": "BARREL", "month": "2020-08", "n": 228}, {"district": "BARREL", "month": "2020-09", "n": 217}, {"district": "BARREL", "month": "2020-10", "n": 182}, {"district": "BARREL", "month": "2020-11", "n": 159}, {"district": "BARREL", "month": "2020-12", "n": 172}, {"district": "BARREL", "month": "2021-01", "n": 209}, {"district": "BARREL", "month": "2021-02", "n": 194}, {"district": "BARREL", "month": "2021-03", "n": 268}, {"district": "BARREL", "month": "2021-04", "n": 216}, {"district": "BARREL", "month": "2021-05", "n": 217}, {"district": "BARREL", "month": "2021-06", "n": 243}, {"district": "BARREL", "month": "2021-07", "n": 188}, {"district": "BARREL", "month": "2021-08", "n": 262}, {"district": "BARREL", "month": "2021-09", "n": 234}, {"district": "BARREL", "month": "2021-10", "n": 210}, {"district": "BARREL", "month": "2021-11", "n": 174}, {"district": "BARREL", "month": "2021-12", "n": 162}, {"district": "BARREL", "month": "2022-01", "n": 194}, {"district": "BARREL", "month": "2022-02", "n": 201}, {"district": "BARREL", "month": "2022-03", "n": 172}, {"district": "BARREL", "month": "2022-04", "n": 185}, {"district": "BARREL", "month": "2022-05", "n": 246}, {"district": "BARREL", "month": "2022-06", "n": 218}, {"district": "BARREL", "month": "2022-07", "n": 219}, {"district": "BARREL", "month": "2022-08", "n": 230}, {"district": "BARREL", "month": "2022-09", "n": 175}, {"district": "BARREL", "month": "2022-10", "n": 228}, {"district": "BARREL", "month": "2022-11", "n": 200}, {"district": "BARREL", "month": "2022-12", "n": 147}, {"district": "BARREL", "month": "2023-01", "n": 201}, {"district": "BARREL", "month": "2023-02", "n": 132}, {"district": "BARREL", "month": "2023-03", "n": 209}, {"district": "BARREL", "month": "2023-04", "n": 177}, {"district": "BARREL", "month": "2023-05", "n": 279}, {"district": "BARREL", "month": "2023-06", "n": 298}, {"district": "BARREL", "month": "2023-07", "n": 203}, {"district": "BARREL", "month": "2023-08", "n": 202}, {"district": "BARREL", "month": "2023-09", "n": 237}, {"district": "BARREL", "month": "2023-10", "n": 192}, {"district": "BARREL", "month": "2023-11", "n": 195}, {"district": "BARREL", "month": "2023-12", "n": 146}, {"district": "BARREL", "month": "2024-01", "n": 188}, {"district": "BARREL", "month": "2024-02", "n": 191}, {"district": "BARREL", "month": "2024-03", "n": 186}, {"district": "BARREL", "month": "2024-04", "n": 216}, {"district": "BARREL", "month": "2024-05", "n": 201}, {"district": "BARREL", "month": "2024-06", "n": 179}, {"district": "BARREL", "month": "2024-07", "n": 191}, {"district": "BARREL", "month": "2024-08", "n": 193}, {"district": "BARREL", "month": "2024-09", "n": 167}, {"district": "BARREL", "month": "2024-10", "n": 166}, {"district": "BARREL", "month": "2024-11", "n": 98}, {"district": "BARREL", "month": "2024-12", "n": 170}, {"district": "BARREL", "month": "2025-01", "n": 151}, {"district": "BARREL", "month": "2025-02", "n": 115}, {"district": "BARREL", "month": "2025-03", "n": 151}, {"district": "BARREL", "month": "2025-04", "n": 231}, {"district": "BARREL", "month": "2025-05", "n": 196}, {"district": "BARREL", "month": "2025-06", "n": 210}, {"district": "BARREL", "month": "2025-07", "n": 185}, {"district": "BARREL", "month": "2025-08", "n": 231}, {"district": "BARREL", "month": "2025-09", "n": 204}, {"district": "BARREL", "month": "2025-10", "n": 212}, {"district": "BARREL", "month": "2025-11", "n": 189}, {"district": "BARREL", "month": "2025-12", "n": 225}, {"district": "BARREL", "month": "2026-01", "n": 189}, {"district": "BARREL", "month": "2026-02", "n": 207}, {"district": "BARREL", "month": "2026-03", "n": 267}, {"district": "BARREL", "month": "2026-04", "n": 201}, {"district": "BARREL", "month": "2026-05", "n": 191}, {"district": "BARREL", "month": "2026-06", "n": 186}, {"district": "BARREL", "month": "2026-07", "n": 188}, {"district": "CACTUS", "month": "2020-01", "n": 145}, {"district": "CACTUS", "month": "2020-02", "n": 145}, {"district": "CACTUS", "month": "2020-03", "n": 160}, {"district": "CACTUS", "month": "2020-04", "n": 221}, {"district": "CACTUS", "month": "2020-05", "n": 217}, {"district": "CACTUS", "month": "2020-06", "n": 232}, {"district": "CACTUS", "month": "2020-07", "n": 204}, {"district": "CACTUS", "month": "2020-08", "n": 196}, {"district": "CACTUS", "month": "2020-09", "n": 150}, {"district": "CACTUS", "month": "2020-10", "n": 149}, {"district": "CACTUS", "month": "2020-11", "n": 134}, {"district": "CACTUS", "month": "2020-12", "n": 118}, {"district": "CACTUS", "month": "2021-01", "n": 184}, {"district": "CACTUS", "month": "2021-02", "n": 141}, {"district": "CACTUS", "month": "2021-03", "n": 163}, {"district": "CACTUS", "month": "2021-04", "n": 197}, {"district": "CACTUS", "month": "2021-05", "n": 199}, {"district": "CACTUS", "month": "2021-06", "n": 174}, {"district": "CACTUS", "month": "2021-07", "n": 172}, {"district": "CACTUS", "month": "2021-08", "n": 263}, {"district": "CACTUS", "month": "2021-09", "n": 226}, {"district": "CACTUS", "month": "2021-10", "n": 173}, {"district": "CACTUS", "month": "2021-11", "n": 176}, {"district": "CACTUS", "month": "2021-12", "n": 171}, {"district": "CACTUS", "month": "2022-01", "n": 154}, {"district": "CACTUS", "month": "2022-02", "n": 158}, {"district": "CACTUS", "month": "2022-03", "n": 177}, {"district": "CACTUS", "month": "2022-04", "n": 180}, {"district": "CACTUS", "month": "2022-05", "n": 190}, {"district": "CACTUS", "month": "2022-06", "n": 179}, {"district": "CACTUS", "month": "2022-07", "n": 151}, {"district": "CACTUS", "month": "2022-08", "n": 203}, {"district": "CACTUS", "month": "2022-09", "n": 161}, {"district": "CACTUS", "month": "2022-10", "n": 177}, {"district": "CACTUS", "month": "2022-11", "n": 122}, {"district": "CACTUS", "month": "2022-12", "n": 189}, {"district": "CACTUS", "month": "2023-01", "n": 188}, {"district": "CACTUS", "month": "2023-02", "n": 150}, {"district": "CACTUS", "month": "2023-03", "n": 160}, {"district": "CACTUS", "month": "2023-04", "n": 149}, {"district": "CACTUS", "month": "2023-05", "n": 408}, {"district": "CACTUS", "month": "2023-06", "n": 218}, {"district": "CACTUS", "month": "2023-07", "n": 168}, {"district": "CACTUS", "month": "2023-08", "n": 176}, {"district": "CACTUS", "month": "2023-09", "n": 172}, {"district": "CACTUS", "month": "2023-10", "n": 162}, {"district": "CACTUS", "month": "2023-11", "n": 179}, {"district": "CACTUS", "month": "2023-12", "n": 128}, {"district": "CACTUS", "month": "2024-01", "n": 142}, {"district": "CACTUS", "month": "2024-02", "n": 140}, {"district": "CACTUS", "month": "2024-03", "n": 163}, {"district": "CACTUS", "month": "2024-04", "n": 154}, {"district": "CACTUS", "month": "2024-05", "n": 171}, {"district": "CACTUS", "month": "2024-06", "n": 165}, {"district": "CACTUS", "month": "2024-07", "n": 207}, {"district": "CACTUS", "month": "2024-08", "n": 132}, {"district": "CACTUS", "month": "2024-09", "n": 138}, {"district": "CACTUS", "month": "2024-10", "n": 124}, {"district": "CACTUS", "month": "2024-11", "n": 114}, {"district": "CACTUS", "month": "2024-12", "n": 103}, {"district": "CACTUS", "month": "2025-01", "n": 121}, {"district": "CACTUS", "month": "2025-02", "n": 102}, {"district": "CACTUS", "month": "2025-03", "n": 129}, {"district": "CACTUS", "month": "2025-04", "n": 184}, {"district": "CACTUS", "month": "2025-05", "n": 192}, {"district": "CACTUS", "month": "2025-06", "n": 148}, {"district": "CACTUS", "month": "2025-07", "n": 149}, {"district": "CACTUS", "month": "2025-08", "n": 194}, {"district": "CACTUS", "month": "2025-09", "n": 149}, {"district": "CACTUS", "month": "2025-10", "n": 124}, {"district": "CACTUS", "month": "2025-11", "n": 130}, {"district": "CACTUS", "month": "2025-12", "n": 134}, {"district": "CACTUS", "month": "2026-01", "n": 130}, {"district": "CACTUS", "month": "2026-02", "n": 116}, {"district": "CACTUS", "month": "2026-03", "n": 172}, {"district": "CACTUS", "month": "2026-04", "n": 170}, {"district": "CACTUS", "month": "2026-05", "n": 198}, {"district": "CACTUS", "month": "2026-06", "n": 151}, {"district": "CACTUS", "month": "2026-07", "n": 154}, {"district": "CHOLLA", "month": "2020-01", "n": 256}, {"district": "CHOLLA", "month": "2020-02", "n": 252}, {"district": "CHOLLA", "month": "2020-03", "n": 222}, {"district": "CHOLLA", "month": "2020-04", "n": 308}, {"district": "CHOLLA", "month": "2020-05", "n": 336}, {"district": "CHOLLA", "month": "2020-06", "n": 294}, {"district": "CHOLLA", "month": "2020-07", "n": 320}, {"district": "CHOLLA", "month": "2020-08", "n": 299}, {"district": "CHOLLA", "month": "2020-09", "n": 305}, {"district": "CHOLLA", "month": "2020-10", "n": 253}, {"district": "CHOLLA", "month": "2020-11", "n": 239}, {"district": "CHOLLA", "month": "2020-12", "n": 245}, {"district": "CHOLLA", "month": "2021-01", "n": 234}, {"district": "CHOLLA", "month": "2021-02", "n": 246}, {"district": "CHOLLA", "month": "2021-03", "n": 266}, {"district": "CHOLLA", "month": "2021-04", "n": 274}, {"district": "CHOLLA", "month": "2021-05", "n": 258}, {"district": "CHOLLA", "month": "2021-06", "n": 371}, {"district": "CHOLLA", "month": "2021-07", "n": 316}, {"district": "CHOLLA", "month": "2021-08", "n": 327}, {"district": "CHOLLA", "month": "2021-09", "n": 274}, {"district": "CHOLLA", "month": "2021-10", "n": 214}, {"district": "CHOLLA", "month": "2021-11", "n": 200}, {"district": "CHOLLA", "month": "2021-12", "n": 242}, {"district": "CHOLLA", "month": "2022-01", "n": 293}, {"district": "CHOLLA", "month": "2022-02", "n": 227}, {"district": "CHOLLA", "month": "2022-03", "n": 223}, {"district": "CHOLLA", "month": "2022-04", "n": 260}, {"district": "CHOLLA", "month": "2022-05", "n": 326}, {"district": "CHOLLA", "month": "2022-06", "n": 288}, {"district": "CHOLLA", "month": "2022-07", "n": 232}, {"district": "CHOLLA", "month": "2022-08", "n": 277}, {"district": "CHOLLA", "month": "2022-09", "n": 247}, {"district": "CHOLLA", "month": "2022-10", "n": 276}, {"district": "CHOLLA", "month": "2022-11", "n": 222}, {"district": "CHOLLA", "month": "2022-12", "n": 233}, {"district": "CHOLLA", "month": "2023-01", "n": 214}, {"district": "CHOLLA", "month": "2023-02", "n": 223}, {"district": "CHOLLA", "month": "2023-03", "n": 204}, {"district": "CHOLLA", "month": "2023-04", "n": 231}, {"district": "CHOLLA", "month": "2023-05", "n": 268}, {"district": "CHOLLA", "month": "2023-06", "n": 230}, {"district": "CHOLLA", "month": "2023-07", "n": 273}, {"district": "CHOLLA", "month": "2023-08", "n": 267}, {"district": "CHOLLA", "month": "2023-09", "n": 291}, {"district": "CHOLLA", "month": "2023-10", "n": 257}, {"district": "CHOLLA", "month": "2023-11", "n": 208}, {"district": "CHOLLA", "month": "2023-12", "n": 173}, {"district": "CHOLLA", "month": "2024-01", "n": 215}, {"district": "CHOLLA", "month": "2024-02", "n": 213}, {"district": "CHOLLA", "month": "2024-03", "n": 212}, {"district": "CHOLLA", "month": "2024-04", "n": 198}, {"district": "CHOLLA", "month": "2024-05", "n": 192}, {"district": "CHOLLA", "month": "2024-06", "n": 255}, {"district": "CHOLLA", "month": "2024-07", "n": 271}, {"district": "CHOLLA", "month": "2024-08", "n": 188}, {"district": "CHOLLA", "month": "2024-09", "n": 230}, {"district": "CHOLLA", "month": "2024-10", "n": 203}, {"district": "CHOLLA", "month": "2024-11", "n": 160}, {"district": "CHOLLA", "month": "2024-12", "n": 153}, {"district": "CHOLLA", "month": "2025-01", "n": 182}, {"district": "CHOLLA", "month": "2025-02", "n": 203}, {"district": "CHOLLA", "month": "2025-03", "n": 209}, {"district": "CHOLLA", "month": "2025-04", "n": 239}, {"district": "CHOLLA", "month": "2025-05", "n": 234}, {"district": "CHOLLA", "month": "2025-06", "n": 299}, {"district": "CHOLLA", "month": "2025-07", "n": 293}, {"district": "CHOLLA", "month": "2025-08", "n": 284}, {"district": "CHOLLA", "month": "2025-09", "n": 241}, {"district": "CHOLLA", "month": "2025-10", "n": 281}, {"district": "CHOLLA", "month": "2025-11", "n": 207}, {"district": "CHOLLA", "month": "2025-12", "n": 225}, {"district": "CHOLLA", "month": "2026-01", "n": 209}, {"district": "CHOLLA", "month": "2026-02", "n": 178}, {"district": "CHOLLA", "month": "2026-03", "n": 224}, {"district": "CHOLLA", "month": "2026-04", "n": 210}, {"district": "CHOLLA", "month": "2026-05", "n": 191}, {"district": "CHOLLA", "month": "2026-06", "n": 190}, {"district": "CHOLLA", "month": "2026-07", "n": 271}, {"district": "OCOTILLO", "month": "2020-01", "n": 160}, {"district": "OCOTILLO", "month": "2020-02", "n": 187}, {"district": "OCOTILLO", "month": "2020-03", "n": 191}, {"district": "OCOTILLO", "month": "2020-04", "n": 260}, {"district": "OCOTILLO", "month": "2020-05", "n": 227}, {"district": "OCOTILLO", "month": "2020-06", "n": 280}, {"district": "OCOTILLO", "month": "2020-07", "n": 244}, {"district": "OCOTILLO", "month": "2020-08", "n": 203}, {"district": "OCOTILLO", "month": "2020-09", "n": 216}, {"district": "OCOTILLO", "month": "2020-10", "n": 166}, {"district": "OCOTILLO", "month": "2020-11", "n": 160}, {"district": "OCOTILLO", "month": "2020-12", "n": 160}, {"district": "OCOTILLO", "month": "2021-01", "n": 183}, {"district": "OCOTILLO", "month": "2021-02", "n": 226}, {"district": "OCOTILLO", "month": "2021-03", "n": 235}, {"district": "OCOTILLO", "month": "2021-04", "n": 214}, {"district": "OCOTILLO", "month": "2021-05", "n": 189}, {"district": "OCOTILLO", "month": "2021-06", "n": 250}, {"district": "OCOTILLO", "month": "2021-07", "n": 208}, {"district": "OCOTILLO", "month": "2021-08", "n": 275}, {"district": "OCOTILLO", "month": "2021-09", "n": 265}, {"district": "OCOTILLO", "month": "2021-10", "n": 190}, {"district": "OCOTILLO", "month": "2021-11", "n": 190}, {"district": "OCOTILLO", "month": "2021-12", "n": 236}, {"district": "OCOTILLO", "month": "2022-01", "n": 194}, {"district": "OCOTILLO", "month": "2022-02", "n": 162}, {"district": "OCOTILLO", "month": "2022-03", "n": 225}, {"district": "OCOTILLO", "month": "2022-04", "n": 214}, {"district": "OCOTILLO", "month": "2022-05", "n": 259}, {"district": "OCOTILLO", "month": "2022-06", "n": 246}, {"district": "OCOTILLO", "month": "2022-07", "n": 212}, {"district": "OCOTILLO", "month": "2022-08", "n": 255}, {"district": "OCOTILLO", "month": "2022-09", "n": 259}, {"district": "OCOTILLO", "month": "2022-10", "n": 298}, {"district": "OCOTILLO", "month": "2022-11", "n": 185}, {"district": "OCOTILLO", "month": "2022-12", "n": 230}, {"district": "OCOTILLO", "month": "2023-01", "n": 220}, {"district": "OCOTILLO", "month": "2023-02", "n": 190}, {"district": "OCOTILLO", "month": "2023-03", "n": 247}, {"district": "OCOTILLO", "month": "2023-04", "n": 260}, {"district": "OCOTILLO", "month": "2023-05", "n": 321}, {"district": "OCOTILLO", "month": "2023-06", "n": 366}, {"district": "OCOTILLO", "month": "2023-07", "n": 278}, {"district": "OCOTILLO", "month": "2023-08", "n": 294}, {"district": "OCOTILLO", "month": "2023-09", "n": 299}, {"district": "OCOTILLO", "month": "2023-10", "n": 282}, {"district": "OCOTILLO", "month": "2023-11", "n": 196}, {"district": "OCOTILLO", "month": "2023-12", "n": 200}, {"district": "OCOTILLO", "month": "2024-01", "n": 178}, {"district": "OCOTILLO", "month": "2024-02", "n": 191}, {"district": "OCOTILLO", "month": "2024-03", "n": 287}, {"district": "OCOTILLO", "month": "2024-04", "n": 277}, {"district": "OCOTILLO", "month": "2024-05", "n": 246}, {"district": "OCOTILLO", "month": "2024-06", "n": 231}, {"district": "OCOTILLO", "month": "2024-07", "n": 270}, {"district": "OCOTILLO", "month": "2024-08", "n": 226}, {"district": "OCOTILLO", "month": "2024-09", "n": 179}, {"district": "OCOTILLO", "month": "2024-10", "n": 244}, {"district": "OCOTILLO", "month": "2024-11", "n": 142}, {"district": "OCOTILLO", "month": "2024-12", "n": 203}, {"district": "OCOTILLO", "month": "2025-01", "n": 169}, {"district": "OCOTILLO", "month": "2025-02", "n": 166}, {"district": "OCOTILLO", "month": "2025-03", "n": 188}, {"district": "OCOTILLO", "month": "2025-04", "n": 218}, {"district": "OCOTILLO", "month": "2025-05", "n": 267}, {"district": "OCOTILLO", "month": "2025-06", "n": 196}, {"district": "OCOTILLO", "month": "2025-07", "n": 234}, {"district": "OCOTILLO", "month": "2025-08", "n": 208}, {"district": "OCOTILLO", "month": "2025-09", "n": 277}, {"district": "OCOTILLO", "month": "2025-10", "n": 194}, {"district": "OCOTILLO", "month": "2025-11", "n": 238}, {"district": "OCOTILLO", "month": "2025-12", "n": 200}, {"district": "OCOTILLO", "month": "2026-01", "n": 199}, {"district": "OCOTILLO", "month": "2026-02", "n": 171}, {"district": "OCOTILLO", "month": "2026-03", "n": 254}, {"district": "OCOTILLO", "month": "2026-04", "n": 213}, {"district": "OCOTILLO", "month": "2026-05", "n": 303}, {"district": "OCOTILLO", "month": "2026-06", "n": 189}, {"district": "OCOTILLO", "month": "2026-07", "n": 201}, {"district": "SAHUARO", "month": "2020-01", "n": 249}, {"district": "SAHUARO", "month": "2020-02", "n": 270}, {"district": "SAHUARO", "month": "2020-03", "n": 293}, {"district": "SAHUARO", "month": "2020-04", "n": 324}, {"district": "SAHUARO", "month": "2020-05", "n": 324}, {"district": "SAHUARO", "month": "2020-06", "n": 328}, {"district": "SAHUARO", "month": "2020-07", "n": 273}, {"district": "SAHUARO", "month": "2020-08", "n": 315}, {"district": "SAHUARO", "month": "2020-09", "n": 300}, {"district": "SAHUARO", "month": "2020-10", "n": 284}, {"district": "SAHUARO", "month": "2020-11", "n": 232}, {"district": "SAHUARO", "month": "2020-12", "n": 222}, {"district": "SAHUARO", "month": "2021-01", "n": 250}, {"district": "SAHUARO", "month": "2021-02", "n": 193}, {"district": "SAHUARO", "month": "2021-03", "n": 264}, {"district": "SAHUARO", "month": "2021-04", "n": 308}, {"district": "SAHUARO", "month": "2021-05", "n": 299}, {"district": "SAHUARO", "month": "2021-06", "n": 326}, {"district": "SAHUARO", "month": "2021-07", "n": 306}, {"district": "SAHUARO", "month": "2021-08", "n": 327}, {"district": "SAHUARO", "month": "2021-09", "n": 314}, {"district": "SAHUARO", "month": "2021-10", "n": 283}, {"district": "SAHUARO", "month": "2021-11", "n": 258}, {"district": "SAHUARO", "month": "2021-12", "n": 238}, {"district": "SAHUARO", "month": "2022-01", "n": 294}, {"district": "SAHUARO", "month": "2022-02", "n": 302}, {"district": "SAHUARO", "month": "2022-03", "n": 269}, {"district": "SAHUARO", "month": "2022-04", "n": 269}, {"district": "SAHUARO", "month": "2022-05", "n": 312}, {"district": "SAHUARO", "month": "2022-06", "n": 273}, {"district": "SAHUARO", "month": "2022-07", "n": 285}, {"district": "SAHUARO", "month": "2022-08", "n": 329}, {"district": "SAHUARO", "month": "2022-09", "n": 312}, {"district": "SAHUARO", "month": "2022-10", "n": 226}, {"district": "SAHUARO", "month": "2022-11", "n": 214}, {"district": "SAHUARO", "month": "2022-12", "n": 201}, {"district": "SAHUARO", "month": "2023-01", "n": 232}, {"district": "SAHUARO", "month": "2023-02", "n": 201}, {"district": "SAHUARO", "month": "2023-03", "n": 277}, {"district": "SAHUARO", "month": "2023-04", "n": 290}, {"district": "SAHUARO", "month": "2023-05", "n": 339}, {"district": "SAHUARO", "month": "2023-06", "n": 324}, {"district": "SAHUARO", "month": "2023-07", "n": 262}, {"district": "SAHUARO", "month": "2023-08", "n": 306}, {"district": "SAHUARO", "month": "2023-09", "n": 312}, {"district": "SAHUARO", "month": "2023-10", "n": 290}, {"district": "SAHUARO", "month": "2023-11", "n": 208}, {"district": "SAHUARO", "month": "2023-12", "n": 173}, {"district": "SAHUARO", "month": "2024-01", "n": 251}, {"district": "SAHUARO", "month": "2024-02", "n": 177}, {"district": "SAHUARO", "month": "2024-03", "n": 204}, {"district": "SAHUARO", "month": "2024-04", "n": 309}, {"district": "SAHUARO", "month": "2024-05", "n": 249}, {"district": "SAHUARO", "month": "2024-06", "n": 216}, {"district": "SAHUARO", "month": "2024-07", "n": 250}, {"district": "SAHUARO", "month": "2024-08", "n": 236}, {"district": "SAHUARO", "month": "2024-09", "n": 225}, {"district": "SAHUARO", "month": "2024-10", "n": 225}, {"district": "SAHUARO", "month": "2024-11", "n": 153}, {"district": "SAHUARO", "month": "2024-12", "n": 164}, {"district": "SAHUARO", "month": "2025-01", "n": 182}, {"district": "SAHUARO", "month": "2025-02", "n": 159}, {"district": "SAHUARO", "month": "2025-03", "n": 218}, {"district": "SAHUARO", "month": "2025-04", "n": 316}, {"district": "SAHUARO", "month": "2025-05", "n": 289}, {"district": "SAHUARO", "month": "2025-06", "n": 287}, {"district": "SAHUARO", "month": "2025-07", "n": 262}, {"district": "SAHUARO", "month": "2025-08", "n": 266}, {"district": "SAHUARO", "month": "2025-09", "n": 312}, {"district": "SAHUARO", "month": "2025-10", "n": 272}, {"district": "SAHUARO", "month": "2025-11", "n": 194}, {"district": "SAHUARO", "month": "2025-12", "n": 223}, {"district": "SAHUARO", "month": "2026-01", "n": 208}, {"district": "SAHUARO", "month": "2026-02", "n": 190}, {"district": "SAHUARO", "month": "2026-03", "n": 302}, {"district": "SAHUARO", "month": "2026-04", "n": 215}, {"district": "SAHUARO", "month": "2026-05", "n": 179}, {"district": "SAHUARO", "month": "2026-06", "n": 227}, {"district": "SAHUARO", "month": "2026-07", "n": 193}, {"district": "YUCCA", "month": "2020-01", "n": 186}, {"district": "YUCCA", "month": "2020-02", "n": 209}, {"district": "YUCCA", "month": "2020-03", "n": 241}, {"district": "YUCCA", "month": "2020-04", "n": 274}, {"district": "YUCCA", "month": "2020-05", "n": 244}, {"district": "YUCCA", "month": "2020-06", "n": 270}, {"district": "YUCCA", "month": "2020-07", "n": 228}, {"district": "YUCCA", "month": "2020-08", "n": 254}, {"district": "YUCCA", "month": "2020-09", "n": 184}, {"district": "YUCCA", "month": "2020-10", "n": 208}, {"district": "YUCCA", "month": "2020-11", "n": 195}, {"district": "YUCCA", "month": "2020-12", "n": 170}, {"district": "YUCCA", "month": "2021-01", "n": 192}, {"district": "YUCCA", "month": "2021-02", "n": 213}, {"district": "YUCCA", "month": "2021-03", "n": 239}, {"district": "YUCCA", "month": "2021-04", "n": 201}, {"district": "YUCCA", "month": "2021-05", "n": 208}, {"district": "YUCCA", "month": "2021-06", "n": 273}, {"district": "YUCCA", "month": "2021-07", "n": 261}, {"district": "YUCCA", "month": "2021-08", "n": 329}, {"district": "YUCCA", "month": "2021-09", "n": 250}, {"district": "YUCCA", "month": "2021-10", "n": 176}, {"district": "YUCCA", "month": "2021-11", "n": 212}, {"district": "YUCCA", "month": "2021-12", "n": 198}, {"district": "YUCCA", "month": "2022-01", "n": 201}, {"district": "YUCCA", "month": "2022-02", "n": 192}, {"district": "YUCCA", "month": "2022-03", "n": 195}, {"district": "YUCCA", "month": "2022-04", "n": 239}, {"district": "YUCCA", "month": "2022-05", "n": 251}, {"district": "YUCCA", "month": "2022-06", "n": 229}, {"district": "YUCCA", "month": "2022-07", "n": 213}, {"district": "YUCCA", "month": "2022-08", "n": 241}, {"district": "YUCCA", "month": "2022-09", "n": 191}, {"district": "YUCCA", "month": "2022-10", "n": 224}, {"district": "YUCCA", "month": "2022-11", "n": 206}, {"district": "YUCCA", "month": "2022-12", "n": 158}, {"district": "YUCCA", "month": "2023-01", "n": 222}, {"district": "YUCCA", "month": "2023-02", "n": 182}, {"district": "YUCCA", "month": "2023-03", "n": 195}, {"district": "YUCCA", "month": "2023-04", "n": 268}, {"district": "YUCCA", "month": "2023-05", "n": 311}, {"district": "YUCCA", "month": "2023-06", "n": 316}, {"district": "YUCCA", "month": "2023-07", "n": 207}, {"district": "YUCCA", "month": "2023-08", "n": 265}, {"district": "YUCCA", "month": "2023-09", "n": 298}, {"district": "YUCCA", "month": "2023-10", "n": 201}, {"district": "YUCCA", "month": "2023-11", "n": 193}, {"district": "YUCCA", "month": "2023-12", "n": 185}, {"district": "YUCCA", "month": "2024-01", "n": 204}, {"district": "YUCCA", "month": "2024-02", "n": 198}, {"district": "YUCCA", "month": "2024-03", "n": 222}, {"district": "YUCCA", "month": "2024-04", "n": 241}, {"district": "YUCCA", "month": "2024-05", "n": 236}, {"district": "YUCCA", "month": "2024-06", "n": 221}, {"district": "YUCCA", "month": "2024-07", "n": 289}, {"district": "YUCCA", "month": "2024-08", "n": 189}, {"district": "YUCCA", "month": "2024-09", "n": 206}, {"district": "YUCCA", "month": "2024-10", "n": 264}, {"district": "YUCCA", "month": "2024-11", "n": 152}, {"district": "YUCCA", "month": "2024-12", "n": 192}, {"district": "YUCCA", "month": "2025-01", "n": 192}, {"district": "YUCCA", "month": "2025-02", "n": 173}, {"district": "YUCCA", "month": "2025-03", "n": 192}, {"district": "YUCCA", "month": "2025-04", "n": 235}, {"district": "YUCCA", "month": "2025-05", "n": 220}, {"district": "YUCCA", "month": "2025-06", "n": 219}, {"district": "YUCCA", "month": "2025-07", "n": 233}, {"district": "YUCCA", "month": "2025-08", "n": 213}, {"district": "YUCCA", "month": "2025-09", "n": 215}, {"district": "YUCCA", "month": "2025-10", "n": 249}, {"district": "YUCCA", "month": "2025-11", "n": 219}, {"district": "YUCCA", "month": "2025-12", "n": 208}, {"district": "YUCCA", "month": "2026-01", "n": 206}, {"district": "YUCCA", "month": "2026-02", "n": 272}, {"district": "YUCCA", "month": "2026-03", "n": 286}, {"district": "YUCCA", "month": "2026-04", "n": 275}, {"district": "YUCCA", "month": "2026-05", "n": 226}, {"district": "YUCCA", "month": "2026-06", "n": 253}, {"district": "YUCCA", "month": "2026-07", "n": 202}];
+const meta = {"y_max": 500, "y_ticks": [0, 100, 200, 300, 400, 500], "panels": {"BARREL": {"name": "Barrel", "note": "2023 to 2024: -13.2% \u00b7 Jan to Jul, 2026 vs 2025: +15.3% \u00b7 highest month: 298 (Jun 2023)"}, "CACTUS": {"name": "Cactus", "note": "2023 to 2024: -22.4% \u00b7 Jan to Jul, 2026 vs 2025: +6.4% \u00b7 highest month: 408 (May 2023)"}, "CHOLLA": {"name": "Cholla", "note": "2023 to 2024: -12.3% \u00b7 Jan to Jul, 2026 vs 2025: -11.2% \u00b7 highest month: 371 (Jun 2021)"}, "OCOTILLO": {"name": "Ocotillo", "note": "2023 to 2024: -15.2% \u00b7 Jan to Jul, 2026 vs 2025: +6.4% \u00b7 highest month: 366 (Jun 2023)"}, "SAHUARO": {"name": "Sahuaro", "note": "2023 to 2024: -17.3% \u00b7 Jan to Jul, 2026 vs 2025: -11.6% \u00b7 highest month: 339 (May 2023)"}, "YUCCA": {"name": "Yucca", "note": "2023 to 2024: -8.1% \u00b7 Jan to Jul, 2026 vs 2025: +17.5% \u00b7 highest month: 329 (Aug 2021)"}}, "peak": {"district": "CACTUS", "month": "2023-05", "n": 408, "label": "408 in May 2023"}, "low": {"district": "BARREL", "month": "2024-11", "n": 98, "label": "98 in Nov 2024"}};
+/*/fill:data*/
+const districts = Object.keys(meta.panels);
+const yMax = meta.y_max;
+const yTicks = meta.y_ticks;
+
+const W=560, H=280, M={l:54,r:18,t:16,b:42};
+const innerW=W-M.l-M.r, innerH=H-M.t-M.b;
+const allMonths=[...new Set(rows.map(d=>d.month))].sort();
+const start=new Date(allMonths[0]+"-01T00:00:00");
+const end=new Date(allMonths[allMonths.length-1]+"-01T00:00:00");
+const t0=start.getTime(), t1=end.getTime();
+
+function x(month) {
+  return M.l + ((new Date(month+"-01T00:00:00").getTime()-t0)/(t1-t0))*innerW;
+}
+function y(v) { return M.t + innerH - (v/yMax)*innerH; }
+
+const years=[...new Set(allMonths.map(m=>m.slice(0,4)))];
+
+const tooltip=document.createElement("div");
+tooltip.style.position="fixed";
+tooltip.style.pointerEvents="none";
+tooltip.style.background="rgba(23,33,43,.96)";
+tooltip.style.color="white";
+tooltip.style.padding="8px 10px";
+tooltip.style.borderRadius="8px";
+tooltip.style.fontSize="12px";
+tooltip.style.lineHeight="1.35";
+tooltip.style.boxShadow="0 4px 14px rgba(0,0,0,.18)";
+tooltip.style.opacity="0";
+tooltip.style.transition="opacity .08s ease";
+tooltip.style.zIndex="9999";
+document.body.appendChild(tooltip);
+
+function showTooltip(evt, d, district) {
+  const date = new Date(d.month+"-01T00:00:00");
+  const label = date.toLocaleDateString("en-US", {month:"short", year:"numeric"});
+  tooltip.innerHTML = `<strong>${meta.panels[district].name}</strong><br>${label}<br><strong>${d.n.toLocaleString()}</strong> requests`;
+  tooltip.style.left = (evt.clientX + 14) + "px";
+  tooltip.style.top = (evt.clientY + 14) + "px";
+  tooltip.style.opacity = "1";
+}
+function moveTooltip(evt) {
+  tooltip.style.left = (evt.clientX + 14) + "px";
+  tooltip.style.top = (evt.clientY + 14) + "px";
+}
+function hideTooltip() { tooltip.style.opacity = "0"; }
+
+function addLabel(svg, mark, dy) {
+  const dot=document.createElementNS(svg.namespaceURI,"circle");
+  dot.setAttribute("cx",x(mark.month)); dot.setAttribute("cy",y(mark.n)); dot.setAttribute("r","3.6"); dot.setAttribute("fill","var(--accent)");
+  svg.appendChild(dot);
+  const tx=document.createElementNS(svg.namespaceURI,"text");
+  tx.setAttribute("x",x(mark.month)+8); tx.setAttribute("y",y(mark.n)+dy); tx.setAttribute("class","note"); tx.textContent=mark.label;
+  svg.appendChild(tx);
+}
+
+for (const district of districts) {
+  const panel=meta.panels[district];
+  const data=rows.filter(d=>d.district===district).sort((a,b)=>a.month.localeCompare(b.month));
+  const card=document.createElement("section");
+  card.className="card";
+  card.innerHTML=`<h2>${panel.name}</h2>
+    <p class="small">${panel.note}</p>`;
+  const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");
+  svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+  svg.setAttribute("role","img");
+  svg.setAttribute("aria-label",`${panel.name} monthly GlendaleOne request counts`);
+
+  for (const tick of yTicks) {
+    const yy=y(tick);
+    const gl=document.createElementNS(svg.namespaceURI,"line");
+    gl.setAttribute("x1",M.l); gl.setAttribute("x2",W-M.r); gl.setAttribute("y1",yy); gl.setAttribute("y2",yy); gl.setAttribute("class","gridline");
+    svg.appendChild(gl);
+    const tx=document.createElementNS(svg.namespaceURI,"text");
+    tx.setAttribute("x",M.l-9); tx.setAttribute("y",yy+4); tx.setAttribute("text-anchor","end"); tx.setAttribute("class","tick"); tx.textContent=tick;
+    svg.appendChild(tx);
+  }
+
+  const xAxis=document.createElementNS(svg.namespaceURI,"line");
+  xAxis.setAttribute("x1",M.l); xAxis.setAttribute("x2",W-M.r); xAxis.setAttribute("y1",M.t+innerH); xAxis.setAttribute("y2",M.t+innerH); xAxis.setAttribute("class","axis");
+  svg.appendChild(xAxis);
+
+  for (const yr of years) {
+    const xx=x(`${yr}-01`);
+    const tx=document.createElementNS(svg.namespaceURI,"text");
+    tx.setAttribute("x",xx); tx.setAttribute("y",H-16); tx.setAttribute("text-anchor","middle"); tx.setAttribute("class","tick"); tx.textContent=yr;
+    svg.appendChild(tx);
+  }
+
+  let path="";
+  data.forEach((d,i)=>{ path += `${i===0?"M":"L"} ${x(d.month).toFixed(1)} ${y(d.n).toFixed(1)} `; });
+  const p=document.createElementNS(svg.namespaceURI,"path");
+  p.setAttribute("d",path); p.setAttribute("class","line"); svg.appendChild(p);
+
+  if (meta.peak.district===district) addLabel(svg, meta.peak, 4);
+  if (meta.low.district===district) addLabel(svg, meta.low, 16);
+
+  // Interactive points. Invisible hit areas make hovering easy.
+  data.forEach(d=>{
+    const hit=document.createElementNS(svg.namespaceURI,"circle");
+    hit.setAttribute("cx",x(d.month));
+    hit.setAttribute("cy",y(d.n));
+    hit.setAttribute("r","7");
+    hit.setAttribute("fill","transparent");
+    hit.style.cursor="crosshair";
+
+    const dot=document.createElementNS(svg.namespaceURI,"circle");
+    dot.setAttribute("cx",x(d.month));
+    dot.setAttribute("cy",y(d.n));
+    dot.setAttribute("r","3.2");
+    dot.setAttribute("fill","var(--accent)");
+    dot.setAttribute("opacity","0");
+
+    const enter = evt => {
+      dot.setAttribute("opacity","1");
+      dot.setAttribute("r","4.8");
+      showTooltip(evt,d,district);
+    };
+    const move = evt => moveTooltip(evt);
+    const leave = () => {
+      dot.setAttribute("opacity","0");
+      dot.setAttribute("r","3.2");
+      hideTooltip();
+    };
+
+    hit.addEventListener("mouseenter", enter);
+    hit.addEventListener("mousemove", move);
+    hit.addEventListener("mouseleave", leave);
+    dot.addEventListener("mouseenter", enter);
+    dot.addEventListener("mousemove", move);
+    dot.addEventListener("mouseleave", leave);
+
+    svg.appendChild(hit);
+    svg.appendChild(dot);
+  });
+
+  card.appendChild(svg);
+  card.insertAdjacentHTML("beforeend",'<div class="legend"><span class="swatch"></span>Requests per month</div>');
+  document.getElementById("charts").appendChild(card);
+}
+</script>
+
+</body>
+</html>
