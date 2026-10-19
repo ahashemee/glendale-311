@@ -6,8 +6,8 @@ One file per person per iteration: your tasks, when each is due, and what Ma'el 
 
 | Person | File | Pieces | Final due | Status (2026-10-18) |
 |---|---|---|---|---|
-| Shamie | [iter2-shamie.md](iter2-shamie.md) | Reporting-propensity gap | Sun 2026-10-11 (hard) | Red: analysis done, but no PR by the due date or within the 24 h grace. Remaining repo work reassigned to Ma'el, in progress on `feature/iter2-propensity` |
-| Shenoy | [iter2-shenoy.md](iter2-shenoy.md) | Time-to-close by district | Sun 2026-10-11 (hard) | Done: PR #3 merged 2026-10-18 (F-01) |
+| Shamie | [iter2-shamie.md](iter2-shamie.md) | Reporting-propensity gap | Sun 2026-10-11 (hard) | Done, finished by Ma'el: Shamie's analysis; no PR by the due date or within the 24 h grace, so the repo work was reassigned. PR #4 merged 2026-10-18 (F-02) |
+| Shenoy | [iter2-shenoy.md](iter2-shenoy.md) | Time-to-close by district | Sun 2026-10-11 (hard) | Done: PR #3 opened 2026-10-18, a week after the due date, and merged 2026-10-18 (F-01) |
 | Akshara | [iter2-akshara.md](iter2-akshara.md) | Monthly trend chart · storyline and copy · chart review and run sheet | Wed 2026-10-14 (copy, hard) · Fri 2026-10-16 (run sheet) | Red: trend numbers and page done, but no PR, notebook, storyline, copy or run sheet within the grace window. Remaining work reassigned to Ma'el, in progress on `feature/iter2-trend` |
 | Ma'el | [iter2-mael.md](iter2-mael.md) | Spatial join · reviews · synthesis · integration · HTML build | Fri 2026-10-16 (freeze) | In progress: reviews, merges and integration tonight. The spatial join and the synthesis note are not in the repo yet |
 
