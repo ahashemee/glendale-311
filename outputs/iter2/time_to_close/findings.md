@@ -18,12 +18,12 @@ Owner: Shenoy · Reviewer: Ma'el · Notebook: `notebooks/iter2_time_to_close_she
 
 - Closed requests only (99.7% of the analysis set). Requests still open on the extract date are missing, so the latest months lean fast. Only 91.3% of 2026-07 requests were closed by the extract date.
 - 46 requests are On Hold, In Progress or Open but carry a close date; the Closed filter drops them.
-- Whole-day dates: a one-day difference is within the rounding, and a late-evening request can land on the next day.
+- Whole-day dates: a one-day difference is within the rounding, and a request filed in the evening can land on the next day.
 - 59 request types have fewer than 30 closed requests (646 requests, 0.6%); their "typical" time rests on few cases.
 - Outliers are kept: 112 requests (0.11%) took over 365 days; medians with and without them are in `outlier_check.csv`.
 - With 103,939 rows nearly every p-value is tiny, so the effect sizes lead. Effect-size labels are rules of thumb (epsilon squared: Tomczak & Tomczak 2014; Cramér's V: Cohen 1988).
 - Within-type Kruskal-Wallis tests are exploratory and Holm-corrected (`stat_tests.csv`).
-- These are associations, not causes. Nothing here says why a district is faster or slower, or why districts file different request types.
+- These are associations, not cause and effect. Nothing here says why a district is faster or slower, or why districts file different request types.
 - 2,343 in-window requests with no district (were `N/A` or `NONE`) are excluded.
 
 ## Filter log
