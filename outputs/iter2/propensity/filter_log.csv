@@ -1,0 +1,9 @@
+measure,value,description
+n_raw,106795,rows in glendaleone_clean.csv
+excluded_outside_window,178,request_date outside 2020-01-01 to 2026-07-31
+n_window,106617,rows with request_date 2020-01-01 to 2026-07-31
+excluded_no_district,2343,rows in the window with no district (were N/A or NONE)
+n_final,104274,rows in the window in one of the 6 districts
+n_trash_recycle,51027,n_final rows with request_type_group Trash/Recycle Services
+n_no_trash,53247,n_final rows without Trash/Recycle Services
+trash_recycle_share_of_final_pct,48.9,n_trash_recycle / n_final x 100

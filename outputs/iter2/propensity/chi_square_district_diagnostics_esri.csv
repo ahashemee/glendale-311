@@ -1,0 +1,7 @@
+district,observed,expected,standardized_residual,pct_above_below_expected,population_share_pct,request_share_pct
+BARREL,15812,16786.6,-7.52,-5.8,16.1,15.2
+CACTUS,13209,16856.1,-28.09,-21.6,16.2,12.7
+CHOLLA,19354,15839.2,27.93,22.2,15.2,18.6
+OCOTILLO,17766,16875.8,6.85,5.3,16.2,17.0
+SAHUARO,20433,17040.3,25.99,19.9,16.3,19.6
+YUCCA,17700,20876.0,-21.98,-15.2,20.0,17.0

@@ -1,0 +1,6 @@
+covariate,n,rho_esri_all,rho_acs_all,rho_esri_no_trash,rho_acs_no_trash
+dip_hhinc_median_household_income_2026,6,0.429,0.657,-0.143,-0.029
+renter_share_2026_pct,6,-0.6,-0.771,-0.029,-0.086
+acs_internet_with_no_internet_access_pct,6,-0.429,-0.657,0.143,0.029
+acs_lang_18_64_speak_spanish_speak_english_not_well_pct,6,-0.657,-0.657,-0.086,-0.029
+rent_burden_30plus_pct,6,0.58,0.406,0.696,0.493
