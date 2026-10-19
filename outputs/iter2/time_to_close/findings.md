@@ -4,7 +4,7 @@ Owner: Shenoy · Reviewer: Ma'el · Notebook: `notebooks/iter2_time_to_close_she
 
 **Source and freshness:** `data/cleaned/glendaleone_clean.csv` (GlendaleOne External Requests, extract loaded 2026-08-06, team Drive copy). Window: requests opened 2020-01-01 to 2026-07-31. Grain: one row = one closed request. No population denominator is used here.
 
-**Measure:** `days_to_close = close_date - request_date` in whole days (dates are date-only UTC, so a same-day close is 0). A request is *slower than typical for its type* when it took longer than the citywide median for its exact `request_type`, computed on this analysis set. That is not the City's target: the escalation targets are not downloaded, so nothing here is "late" or "on target".
+**Measure:** `days_to_close = close_date - request_date` in whole days (dates are date-only UTC, so a same-day close is 0). A request is *slower than typical for its type* when it took longer than the citywide median for its exact `request_type`, computed on this analysis set. That is not the City's target: the escalation targets are not downloaded, so nothing here is scored against them.
 
 **Change from the plan:** the type control was planned as the 17 `request_type_group` values (ANALYSIS_STANDARDS section 3) and changed after the first run to the 155 exact `request_type` values, which match the task file's wording ("the median for their own request type"). The groups hide large timing differences inside them (finding 3). The group-level result is reported alongside in `type_corrected_share_by_district.csv`, `median_days_by_district_and_type_group.csv` and `stat_tests.csv`.
 

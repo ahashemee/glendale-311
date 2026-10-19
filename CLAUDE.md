@@ -22,7 +22,7 @@ CIS 450 capstone (ASU, Fall 2026) for the City of Glendale, Arizona. We analyse 
   - H1 `[unvalidated]` Request volume per resident may line up with who reports (income, internet, language, rent burden) more than with need.
   - H2 `[unvalidated]` The equity signal may sit in the mix of request types, not the volume.
   - H3 `[supported]` District gaps in days-to-close shrink once request type is controlled (F-01: 14.5 to 3.2 points).
-- **Validated findings:** F-01 (time-to-close, pending review). `docs/PROJECT.md` section 7 figures are orientation only.
+- **Validated findings:** F-01 (about 78% of the raw district gap in time-to-close lines up with request-type mix). `docs/PROJECT.md` section 7 figures are orientation only.
 
 ## Read first, in this order
 

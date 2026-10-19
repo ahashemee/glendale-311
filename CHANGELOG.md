@@ -14,8 +14,7 @@ Use the iteration in the brackets; use `[setup]` for repo or tooling work that b
 
 ## Iteration 2
 
-- 2026-10-18 (Shenoy) [iter2] Added the time-to-close analysis by district, its outputs and F-01, and proposed the H3 Direction edit (notebooks/iter2_time_to_close_shenoy.ipynb, outputs/iter2/time_to_close/, docs/FINDINGS.md, CLAUDE.md) – tests whether district gaps in days-to-close hold once request type is controlled
-
+- 2026-10-18 (Shenoy; finished by Ma'el) [iter2] Added the time-to-close analysis by district, its outputs, F-01 and the H3 Direction edit, logged the exact-type control, added the Iteration 2 status column and removed explanatory code comments (notebooks/iter2_time_to_close_shenoy.ipynb, outputs/iter2/time_to_close/, docs/FINDINGS.md, CLAUDE.md, docs/DECISIONS.md, docs/tasks/README.md) – tests whether district gaps in days-to-close hold once request type is controlled
 - 2026-09-29 (Ma'el) [setup] Replaced the five long task cards with one short task file per person (docs/tasks/) and trimmed the roadmap, PR template and skills to match – a group project needs tasks, due dates and what's expected, not a manual
 - 2026-09-28 (Ma'el) [setup] Smoke-tested both CI checks with a throwaway notebook (notebooks/ci_smoke.ipynb) – prove the checks fail and pass before main is protected
 - 2026-09-28 (Ma'el) [setup] Published the repo as private glendale-311-equity on GitHub with main pushed (origin) – the team works from one shared remote
