@@ -22,7 +22,7 @@ CIS 450 capstone (ASU, Fall 2026) for the City of Glendale, Arizona. We analyse 
   - H1 `[weakened]` With all requests the rate lines up with higher income, fewer renters and less limited English, but those alignments fade to near zero without Trash/Recycle; only rent burden holds (F-02).
   - H2 `[supported]` The equity signal sits in the mix of request types more than the volume: the income alignment (F-02) and most of the time-to-close gap (F-01) track Trash/Recycle, where Residential - Container Damaged is 79% of Cholla's Trash/Recycle requests (F-01).
   - H3 `[supported]` District gaps in days-to-close shrink once request type is controlled (F-01: 14.5 to 3.2 points).
-- **Validated findings:** F-01 (about 78% of the raw district gap in time-to-close lines up with request-type mix); F-02 (Cholla files 1.56x the requests per resident of Cactus, Cohen's w = 0.165; the income, renter and language alignment nearly disappears without Trash/Recycle). `docs/PROJECT.md` section 7 figures are orientation only.
+- **Validated findings:** F-01 (about 78% of the raw district gap in time-to-close lines up with request-type mix); F-02 (Cholla files 1.56x the requests per resident of Cactus, Cohen's w = 0.165; the income, renter and language alignment nearly disappears without Trash/Recycle); F-03 (every district filed fewer requests in 2024 than in 2023, citywide -14.6%; from January to July 2026 the districts moved in different directions). `docs/PROJECT.md` section 7 figures are orientation only.
 
 ## Read first, in this order
 
