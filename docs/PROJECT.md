@@ -10,7 +10,7 @@
 >   and 19 evidence-backed questions for the sponsor.
 > - [`PORTAL_RECON.md`](./PORTAL_RECON.md): the email attachments check, the OpenBook budget portal and the GIS map gallery.
 >
-> Last updated: 2026-09-16 · Maintainer: Ma'el (Amaan) Hashemee · Update the Changelog at the bottom when you change anything.
+> Last updated: 2026-11-17 · Maintainer: Ma'el (Amaan) Hashemee · Update the Changelog at the bottom when you change anything.
 
 ---
 
@@ -25,7 +25,7 @@
 | **Core theme** | **Service equity across the six Council Districts** |
 | **Deliverable** | ⚠️ **NOT ANNOUNCED YET** — see §11 |
 | **Due date** | ⚠️ **NOT ANNOUNCED YET** |
-| **Status** | Kickoff. Data acquired and profiled (2026-09-05). Budget portal and GIS gallery explored, and every published City dataset inventoried from metadata (2026-09-16). No analysis committed yet. |
+| **Status** | Iteration 2 presented Mon 2026-10-19; see `docs/FINDINGS.md`. Iteration 3 (practice run of the final) is due Sun 2026-11-22. |
 | **Project folder** | `Desktop/ASU Courses/FA26/CIS 450/Group Project/` (this folder), data in `./data/`. The Desktop syncs to iCloud; see §4.1. |
 
 **Client's framing, verbatim from the email:**
@@ -663,3 +663,4 @@ question is in `DATA_LANDSCAPE.md` §5.
 | 2026-09-16 | Ma'el + Claude | Updated this file with the new findings. Added live counts and the iCloud/refresh warning (§4.1), fixed the download paths (§4.3), and added the landscape summary (§4.4). Revised §6.1, §6.3, §6.4, §6.6, §6.10 and §6.11, and added §6.12–§6.15. Added the §8 Q2 crosswalk and Q5 candidates, updated the §9 tree and rules, rewrote §10, and expanded §11. `DATA_DICTIONARY.md` was not changed. |
 | 2026-09-16 | Ma'el + Claude | Wrote `DELIVERABLE_IDEAS.md`: three scoped deliverable ideas (reporting-propensity gap, district request signatures, response vs escalation targets) with data-status flags. |
 | 2026-09-28 | Ma'el + Claude | Copied into the `glendale-311-equity` repo as `docs/PROJECT.md`. Rewrote the §9 folder tree to describe the repo, and removed email addresses, the Gmail thread link and the student distribution list. The rest of the text is unchanged. |
+| 2026-11-17 | Ma'el + Claude | Updated the Status line only: Iteration 2 presented; Iteration 3 due Sun 2026-11-22. The deliverable and due-date lines above are unchanged. |
