@@ -53,7 +53,7 @@ Expected: `n_raw` is 106,795. `n_window` is smaller, because August 2026 (178 ro
 | Missing values | NULL, `''` and `'N/A'` all count as missing | 6.6, 6.10 |
 | Population denominator | Primary `dip_summary_total_population_2026` (Esri 2026); sensitivity `acs_total_population` (ACS 2020–24) | 6.8 (YUCCA differs by 24%) |
 | Rate | Requests per 1,000 residents per year = count / YEARS / population x 1000 | Comparable across windows |
-| Type grouping | `request_type_group` (17 groups) for type-mix control | 6.12 |
+| Type grouping | `request_type_group` (17 groups) for type-mix control; time-to-close uses exact `request_type` (155 types) – see DECISIONS 2026-10-18 | 6.12 |
 | Time-to-close | `(close_date - request_date).dt.days` on rows with `status == "Closed"`, a non-null `close_date` and `flag_close_before_request == False` | Dates are date-only UTC, so a same-day close is 0 (section 9; CLEANING_LOG 2) |
 | Percent scale | All `_pct` columns in the demographic files are 0–100 | CLEANING_LOG 1.2 |
 | Median household income | `dip_hhinc_median_household_income_2026` only; never the `dip_trend_..._rate_` columns | 6.7 |
@@ -155,7 +155,7 @@ Chart checks:
 | G-dates | Dates are date-only and in UTC. A same-day close is 0 days, and a late-evening request can land on the next day. | 9 |
 | G-closed | 99.6% of requests are closed, so there's nothing useful to analyze about open requests. Use closed rows only for timing. | 6.11 |
 | G-flags | Drop the 1 row with `flag_close_before_request` True. Do not "fix" it. | CLEANING_LOG 2.5 |
-| G-types | Use `request_type_group` (17 groups) for type mix. Trash/Recycle Services is about 48% of all requests and swamps everything else, so show a version without it where totals matter. | 6.12, 7 |
+| G-types | Use `request_type_group` (17 groups) for type mix; time-to-close uses exact `request_type` (155 types) – see DECISIONS 2026-10-18. Trash/Recycle Services is about 48% of all requests and swamps everything else, so show a version without it where totals matter. | 6.12, 7 |
 | G-codecases | Code Compliance cases have no district until the spatial join is done and shared. Don't use `Code_Compliance_Cases_GlendaleOne.csv` for per-district work before then. | 6.1 |
 | G-citations | Never `sum()` `CriminalCitations`, `CivilCitations` or the other citation columns. They are reference numbers. | 6.9 |
 | G-2025dip | Code case volume in 2025 is probably a reporting gap, not a trend. Don't read it as one. | 6.5 |

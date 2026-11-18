@@ -55,6 +55,8 @@ Every PR adds at least one line to `CHANGELOG.md`; CI fails the PR otherwise. Ad
 - YYYY-MM-DD (Name) [iterN] what changed (path) – why
 ```
 
+Use `[setup]` for repo or tooling work that belongs to no iteration.
+
 Example: `- 2026-10-08 (Shenoy) [iter2] Added the district time-to-close table and tests (outputs/iter2/time_to_close/) – first cut for the draft PR`
 
 One line per meaningful change; a PR can add several. A PR that truly needs no line (for example a typo fix) can carry the `no-changelog` label, which only Ma'el applies.

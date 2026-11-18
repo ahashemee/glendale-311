@@ -15,7 +15,7 @@ CIS 450 capstone project (ASU, Fall 2026) with the City of Glendale, Arizona's O
 
 ## Where we are
 
-**Iteration 2** – in-class presentation on **Mon 2026-10-19** (HTML page). Scope: the reporting-propensity gap (are request counts in line with each district's population, and what do the rates line up with?) and time-to-close by district, controlled for request type. Code Compliance and district request signatures come in the final iteration.
+**Iteration 2** was presented in class on **Mon 2026-10-19** (HTML page) – complete. Its scope was: the reporting-propensity gap (are request counts in line with each district's population, and what do the rates line up with?) and time-to-close by district, controlled for request type. Code Compliance and district request signatures were deferred (DECISIONS 2026-09-25). **Iteration 3** is a practice run of the final presentation: submit **Sun 2026-11-22**, present in class **Mon 2026-11-23**. Task files are in `docs/tasks/`.
 
 - Dates: [`docs/ROADMAP.md`](docs/ROADMAP.md)
 - Your tasks, due dates and what's expected: [`docs/tasks/`](docs/tasks/README.md)
@@ -58,7 +58,7 @@ Then download `glendaleone_clean.csv` from the team Drive folder [DRIVE_FOLDER_L
 To rebuild the raw data and the cleaned files yourself instead:
 
 ```bash
-python src/fetch_data.py        # downloads ~165k request rows into data/raw/
+python src/fetch_data.py        # downloads ~164k rows (GlendaleOne requests plus Code Compliance cases) into data/raw/
 python src/clean_data.py        # rebuilds data/cleaned/ from data/raw/ and data/demographics/
 ```
 

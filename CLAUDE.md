@@ -14,10 +14,10 @@ CIS 450 capstone (ASU, Fall 2026) for the City of Glendale, Arizona. We analyse 
 
 ## Direction (living)
 
-*Last updated: 2026-10-18.* This section is changed by PR whenever a finding shifts the story; it is never treated as fixed. Use the `update-findings` skill to propose the edit.
+*Last updated: 2026-11-17.* This section is changed by PR whenever a finding shifts the story; it is never treated as fixed. Use the `update-findings` skill to propose the edit.
 
-- **Current iteration:** Iteration 2, in-class presentation **Mon 2026-10-19** (HTML page).
-- **Scope:** the reporting-propensity gap (Q1: requests per resident vs population share and district covariates) and time-to-close by district, controlled for request type. Code Compliance and district request signatures wait for the final iteration.
+- **Current iteration:** Iteration 3 – a practice run of the final presentation: submit **Sun 2026-11-22**, present **Mon 2026-11-23** (task files: `docs/tasks/iter3-*.md`). Iteration 2 is complete (presented Mon 2026-10-19).
+- **Iteration 2 scope:** the reporting-propensity gap (Q1: requests per resident vs population share and district covariates) and time-to-close by district, controlled for request type. Code Compliance and district request signatures wait for the final iteration.
 - **Working hypotheses** (from `docs/FINDINGS.md`):
   - H1 `[weakened]` With all requests the rate lines up with higher income, fewer renters and less limited English, but those alignments fade to near zero without Trash/Recycle; only rent burden holds (F-02).
   - H2 `[supported]` The equity signal sits in the mix of request types more than the volume: the income alignment (F-02) and most of the time-to-close gap (F-01) track Trash/Recycle, where Residential - Container Damaged is 79% of Cholla's Trash/Recycle requests (F-01).
@@ -42,7 +42,7 @@ Never re-profile raw data that the docs already describe. If the docs answer it,
 | `docs/ANALYSIS_STANDARDS.md` | Load block, definitions, EDA / stats / chart / QA checks, gotcha library |
 | `docs/DECISIONS.md` · `docs/FINDINGS.md` · `docs/ROADMAP.md` | Dated decisions · living findings · dates |
 | `docs/tasks/` | One task file per person: tasks, due dates, what's expected |
-| `docs/CLEANING_LOG.md` · `docs/DATA_LANDSCAPE.md` · `docs/iteration1/` | What cleaning did · every other City dataset · Iteration 1 proposal and deck |
+| `docs/CLEANING_LOG.md` · `docs/DATA_LANDSCAPE.md` · `docs/iteration1/` · `docs/meetings/` | What cleaning did · every other City dataset · Iteration 1 proposal and deck · retros and synthesis notes |
 | `data/cleaned/` | Cleaned inputs; `glendaleone_clean.csv` comes from the team Drive (git-ignored) |
 | `data/raw/` | Raw request CSVs from `src/fetch_data.py` (git-ignored) |
 | `data/demographics/`, `data/council_districts.geojson` | Esri workbooks and district polygons |
@@ -60,7 +60,7 @@ Never re-profile raw data that the docs already describe. If the docs answer it,
 
 ## Notation rules (MUST)
 
-- Every PR MUST add a `CHANGELOG.md` line: `- YYYY-MM-DD (Name) [iterN-NN] what changed (path) – why`.
+- Every PR MUST add a `CHANGELOG.md` line: `- YYYY-MM-DD (Name) [iterN] what changed (path) – why`. Use `[setup]` for repo or tooling work that belongs to no iteration.
 - Every analysis MUST write `outputs/iterN/<topic>/findings.md` with its findings, caveats and a filter log (`n_raw`, `n_window`, `n_final`, excluded).
 - Notebook outputs MUST be cleared before commit: `jupyter nbconvert --clear-output --inplace notebooks/<file>.ipynb`.
 - Any number that reaches a slide MUST be recomputed from code in this repo, never copied from `docs/PROJECT.md` section 7.

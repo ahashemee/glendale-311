@@ -12,6 +12,12 @@ Use the iteration in the brackets; use `[setup]` for repo or tooling work that b
 
 ## Unreleased
 
+- 2026-11-17 (Ma'el) [setup] Marked Iteration 2 complete and Iteration 3 as being planned in README, CLAUDE.md, ROADMAP, tasks/README and PROJECT.md; documented the [iterN] and [setup] tags consistently; pointed ANALYSIS_STANDARDS at the 2026-10-18 type-control decision – the docs still described Iteration 2 as upcoming
+
+## Iteration 3
+
+- 2026-11-17 (Ma'el) [iter3] Added the Iteration 3 task files (docs/tasks/iter3-*.md), the Iteration 3 sections of docs/tasks/README.md and docs/ROADMAP.md, three DECISIONS rows (practice-run scope and dates, PR-or-Drive hand-in, 12 h grace) and docs/AI_LOG.md – a five-day practice run of the final, planned from the Iteration 2 root-cause review
+
 ## Iteration 2
 
 - 2026-10-18 (Akshara; finished by Ma'el) [iter2] Added the storyline with section copy, speakers and the chart readability pass, the 10-minute run sheet, the Iteration 2 retro draft and the final status update (outputs/iter2/story/, docs/meetings/2026-10-18-iter2-retro.md, docs/tasks/README.md) – one script for the Mon 2026-10-19 talk, with every number traced to a merged findings file
